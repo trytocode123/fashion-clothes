@@ -1,0 +1,122 @@
+.wrapper {
+    display: flex;
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    width: 342px;
+    min-height: 100%;
+    padding-top: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
+    border-radius: 6px;
+    border: 1px solid #8a7268;
+    background: #fff;
+    gap: 54px;
+}
+
+.price-range {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.title-price {
+    color: #171212;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 0.32px;
+    text-transform: uppercase;
+}
+
+.block-range {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.range {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.line {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 284px;
+    max-height: 4px;
+    background-color: gray;
+}
+
+.hand-left {
+    margin-left: 35px;
+    margin-right: -5px;
+}
+
+.hand-right {
+    margin-right: 35px;
+    margin-left: -10px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.h2-title {
+    color: #1f2937;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 0.32px;
+    text-transform: uppercase;
+}
+
+.select {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.block-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.line-adjust {
+    width: 182px;
+}
+
+.input {
+    width: 18px;
+    height: 18px;
+}
+
+.btn-more {
+    color: #c5a356;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.28px;
+    justify-content: flex-start;
+    padding-left: 38px;
+}
+
+label {
+    cursor: pointer;
+    user-select: none;
+}

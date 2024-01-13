@@ -1,0 +1,152 @@
+.wrapper {
+    margin-top: -10px;
+    margin-bottom: -10px;
+    display: flex;
+    width: 1920px;
+    height: 1080px;
+    background: var(--primary-50, #f5f2f1);
+    gap: 36px;
+}
+
+.block-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 960px;
+    height: 1080px;
+}
+
+.block-left__change-password {
+    display: flex;
+    flex-direction: column;
+    width: 460px;
+    height: 438px;
+    gap: 36px;
+}
+
+.block-left__change-password__title-lux-change {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .block-left__change-password__title-lux-change-h2 {
+        margin-top: 0;
+        margin-bottom: 0;
+        color: var(--primary-700, #5f4c49);
+        font-family: Inter;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+    }
+}
+
+.wrapper-total {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.wrapper__next-cancel {
+    display: flex;
+    gap: 11px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.btn-next {
+    color: #fff;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    height: 50px;
+    border-radius: 40px;
+    background: var(--secondary-500, #ab8a37);
+    border: none;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+.btn-cancel {
+    color: var(--secondary-700, #685723);
+    height: 50px;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 40px;
+    border: 1px solid var(--primary-200, #ccc3bc);
+    background: var(--secondary-50, #faf5eb);
+    cursor: pointer;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.wrapper-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.wrapper-form__item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .label {
+        color: var(--primary-700, #5f4c49);
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+    }
+
+    input {
+        padding: 0 22px;
+        font-size: 24px;
+        height: 53px;
+        border-radius: 40px;
+        border: 1px solid #bcbec0;
+        background: #fff;
+        outline: none;
+    }
+}
+
+.error-message {
+    color: red;
+    margin-top: 0px;
+    margin-left: 22px;
+}
+
+.block-left__change-password__title-lux-change-span {
+    color: var(--primary-700, #5f4c49);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.block-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 960px;
+    height: 1080px;
+    flex-shrink: 0;
+    border-radius: 40px 0px 0px 40px;
+    background: var(--secondary-100, #f3e8d4);
+}
+
+.img {
+    width: 745px;
+    height: 691px;
+    flex-shrink: 0;
+}

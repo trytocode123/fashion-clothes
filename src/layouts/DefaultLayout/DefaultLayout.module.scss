@@ -1,0 +1,41 @@
+:root {
+    --primary: #fe2c55;
+    --black: #000;
+    --white: #fff;
+    --secondary-400: #c5a356;
+    --secondary-500: #ab8a37;
+    --primary-700: #5f4c49;
+    --text-color: #161823;
+    --font-family: Inter;
+    --primary-950: #171212;
+    //Default layout
+    --default-layout-header-hight: 60px;
+    --default-layout-width: 1150px;
+    --default-layout-horizontal-spacer: 24px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 1920px;
+    gap: 30px;
+    background: var(--secondary-50, #faf5eb);
+    position: sticky;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    min-height: 3000px;
+}
+
+.container {
+    padding: 0 108.8px;
+    min-width: 1920px;
+    min-height: 2500px;
+}
