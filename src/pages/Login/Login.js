@@ -13,25 +13,21 @@ const cx = classNames.bind(styles);
 
 function Login() {
     const navigate = useNavigate();
-    const test = () => {
-        toast.success('Đăng nhập thành công', {
-            position: 'top-right',
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: 'light',
-        });
-        navigate('/cart');
-    };
+
     const handleLogin = (data) => {
         axios.post('https://shop-ban-hang-backend.onrender.com/user/login', data).then((response) => {
             if (response.status === 201) {
-                test();
+                toast.success('Đăng nhập thành công', {
+                    position: 'top-right',
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: 'light',
+                });
                 navigate('/product');
-                console.log();
             }
         });
     };

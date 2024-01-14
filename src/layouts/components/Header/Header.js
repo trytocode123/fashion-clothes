@@ -6,6 +6,7 @@ import Button from '~/components/Button';
 import images from '~/assets/images';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import React from 'react';
 
 const cx = classNames.bind(styles);
 function Header() {
