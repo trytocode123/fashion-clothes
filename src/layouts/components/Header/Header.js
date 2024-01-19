@@ -1,16 +1,94 @@
 import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
 import Tippy from '@tippyjs/react/headless';
-import { Cart, Down, Iconsearch, Stroke } from '~/components/Icons/Icon';
+import { Cart, Down, Iconsearch, LeftImage, Stroke } from '~/components/Icons/Icon';
 import Button from '~/components/Button';
 import images from '~/assets/images';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 import React from 'react';
 
 const cx = classNames.bind(styles);
+/*
+menu = [
+    {   
+    data: (btnAccounts)
+    [
+    {
+        title: 'Sign up',
+        to: '/signup',
+    },
+
+    {
+        title: 'Log out',
+        to: '/login',
+    },
+
+    {
+        title: 'Language',
+        children: {
+            mainTitle: 'Language',
+            data: [
+                {
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    code: 'vi',
+                    title: 'Việt Nam',
+                },
+            ],
+        }
+    },
+
+    ],
+   }
+
+children: {
+            mainTitle: 'Language',
+            data: [
+                {
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    code: 'vi',
+                    title: 'Việt Nam',
+                },
+            ],
+        },]
+ */
+const btnAccounts = [
+    {
+        title: 'Sign up',
+        to: '/signup',
+    },
+    {
+        title: 'Log out',
+        to: '/login',
+    },
+    {
+        title: 'Language',
+        children: {
+            mainTitle: 'Language',
+            data: [
+                {
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    code: 'vi',
+                    title: 'Việt Nam',
+                },
+            ],
+        },
+    },
+];
 function Header() {
     const navigate = useNavigate();
+    const [menu, setMenu] = useState([{ data: btnAccounts }]);
+    const current = menu[menu.length - 1];
     const items = [
         {
             img: images.no_image,
@@ -28,17 +106,7 @@ function Header() {
             content: '1 Colour',
         },
     ];
-    const btnAccounts = [
-        {
-            title: 'Đăng ký',
-            to: '/signup',
-            borderBottom: true,
-        },
-        {
-            title: 'Đăng xuất',
-            to: '/login',
-        },
-    ];
+
     const arrButton = ['Store', 'Account', 'Wish List'];
     const [account, setAccount] = useState(false);
     const [searchShow, setSearchShow] = useState(false);
@@ -54,6 +122,9 @@ function Header() {
     };
     const handleOutsideClick = () => {
         setSearchShow(!searchShow);
+    };
+    const handleBack = () => {
+        setMenu((prev) => prev.slice(0, prev.length - 1));
     };
     return (
         <div className={cx('wrapper')}>
@@ -129,14 +200,29 @@ function Header() {
                                     tabIndex="-1"
                                     {...attrs}
                                 >
-                                    {btnAccounts.map((btnAccount, index) => (
-                                        <Button
-                                            borderBottom={btnAccount.borderBottom}
-                                            className={cx('btn-link')}
-                                            key={index}
-                                            to={btnAccount.to}
-                                            children={btnAccount.title}
-                                        />
+                                    {menu.length > 1 && (
+                                        <div className={cx('lg:flex')}>
+                                            <button onClick={handleBack}>
+                                                <LeftImage />
+                                            </button>
+                                            <h2 className={cx('lg:font-[700] lg:text-[20px]')}>{current.mainTitle}</h2>
+                                        </div>
+                                    )}
+                                    {current.data.map((btnAccount, index) => (
+                                        <div>
+                                            <Button
+                                                className={cx('btn-link')}
+                                                key={index}
+                                                to={btnAccount.to}
+                                                children={btnAccount.title}
+                                                onClick={() => {
+                                                    const flag = !!btnAccount.children;
+                                                    if (flag) {
+                                                        setMenu((prev) => [...prev, btnAccount.children]);
+                                                    }
+                                                }}
+                                            />
+                                        </div>
                                     ))}
                                 </div>
                             )}
