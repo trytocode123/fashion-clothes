@@ -117,13 +117,14 @@ function Header() {
         if (searchValue.startsWith(' ')) {
             setSearchShow(false);
         } else {
+            console.log(searchShow);
             setSearchValue(searchValueInput);
         }
     };
 
     useEffect(() => {
         setSearchShow(true);
-        console.log(searchValue);
+        console.log(searchShow);
     }, [searchValue]);
 
     const handleOutsideClick = () => {
@@ -170,7 +171,7 @@ function Header() {
                                 value={searchValue}
                                 onChange={handleonChange}
                                 onFocus={() => {
-                                    setSearchShow(!searchShow);
+                                    setSearchShow(true);
                                 }}
                                 id="search"
                                 placeholder="Search for an item..."
