@@ -129,6 +129,9 @@ function Header() {
     const handleOutsideClick = () => {
         setSearchShow(!searchShow);
     };
+    const handleResetMenuPage = () => {
+        setMenu((prev) => prev.slice(0, 1));
+    };
     const handleBack = () => {
         setMenu((prev) => prev.slice(0, prev.length - 1));
     };
@@ -202,6 +205,7 @@ function Header() {
                             placement="bottom-end"
                             interactive={true}
                             trigger="click"
+                            onClickOutside={handleResetMenuPage}
                             render={(attrs) => (
                                 <div
                                     className={cx('lg:w-[200px] lg:bg-white lg:p-[12px] lg:rounded-[5px] ')}
