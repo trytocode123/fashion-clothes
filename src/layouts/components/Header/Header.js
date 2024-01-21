@@ -4,7 +4,7 @@ import Tippy from '@tippyjs/react/headless';
 import { Cart, Down, Iconsearch, LeftImage, Stroke } from '~/components/Icons/Icon';
 import Button from '~/components/Button';
 import images from '~/assets/images';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import React from 'react';
@@ -89,6 +89,7 @@ function Header() {
     const navigate = useNavigate();
     const [menu, setMenu] = useState([{ data: btnAccounts }]);
     const current = menu[menu.length - 1];
+
     const items = [
         {
             img: images.no_image,
@@ -116,10 +117,15 @@ function Header() {
         if (searchValue.startsWith(' ')) {
             setSearchShow(false);
         } else {
-            setSearchShow(true);
             setSearchValue(searchValueInput);
         }
     };
+
+    useEffect(() => {
+        setSearchShow(true);
+        console.log(searchValue);
+    }, [searchValue]);
+
     const handleOutsideClick = () => {
         setSearchShow(!searchShow);
     };
@@ -133,9 +139,6 @@ function Header() {
                     Luxury’s Closet
                 </span>
                 <div className={cx('header__input')}>
-                    <label htmlFor="search">
-                        <Iconsearch className={cx('header__input__iconsearch')} />
-                    </label>
                     <Tippy
                         onClickOutside={handleOutsideClick}
                         placement="bottom-start"
@@ -155,16 +158,21 @@ function Header() {
                             </div>
                         )}
                     >
-                        <input
-                            type="text"
-                            value={searchValue}
-                            onChange={handleonChange}
-                            onFocus={() => {
-                                setSearchShow(!searchShow);
-                            }}
-                            id="search"
-                            placeholder="Search for an item..."
-                        />
+                        <div>
+                            <label htmlFor="search">
+                                <Iconsearch className={cx('header__input__iconsearch')} />
+                            </label>
+                            <input
+                                type="text"
+                                value={searchValue}
+                                onChange={handleonChange}
+                                onFocus={() => {
+                                    setSearchShow(!searchShow);
+                                }}
+                                id="search"
+                                placeholder="Search for an item..."
+                            />
+                        </div>
                     </Tippy>
                     <Stroke className={cx('header__input__stroke')} />
                 </div>
