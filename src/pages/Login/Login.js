@@ -64,7 +64,7 @@ function Login() {
                     </label>
 
                     <button className={cx('wrapper__block-left__btn-sign-in')} onClick={handleSubmit(handleLogin)}>
-                        Sign in
+                        Log in
                     </button>
 
                     <span className={cx('wrapper__block-left__span-continue')}>or continue with</span>

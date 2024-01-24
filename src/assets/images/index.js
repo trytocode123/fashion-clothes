@@ -28,6 +28,12 @@ const images = {
     Star_Half: require('~/assets/images/Star_Half.png'),
     no_image: require('~/assets/images/no-image.png'),
     image_removebg_preview1: require('~/assets/images/image_removebg_preview1.png'),
+    shoes_vintage: require('~/assets/images/shoes_vintage.jpg'),
+    shoes_vintage2: require('~/assets/images/shoes_vintage2.jpg'),
+    shoes_vintage3: require('~/assets/images/shoes_vintage3.jpg'),
+    watch: require('~/assets/images/watch.png'),
+    watch2: require('~/assets/images/watch2.png'),
+    watch3: require('~/assets/images/watch3.png'),
 };
 
 export default images;

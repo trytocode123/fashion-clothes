@@ -21,7 +21,7 @@ import {
     Tick,
 } from '~/components/Icons/Icon';
 import Button from '~/components/Button/Button';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import Quanlity from '~/components/Quanlity';
 
 const cx = classNames.bind(styles);
@@ -129,7 +129,7 @@ function Details() {
         },
     ];
     const arrImgs = [images.Rectangle6, images.Rectangle5, images.Rectangle7, images.Rectangle8];
-    const checkRef = useRef();
+
     const arrSizes = ['Small', 'Medium', 'Large', 'Extra Large', 'XXL'];
     const inputCheckboxes = [<InputChecked />, <InputGreen />, <InputBlue />, <InputPink />, <InputGradient />];
 
@@ -324,7 +324,6 @@ function Details() {
                                     )}
                                 >
                                     <input
-                                        ref={checkRef}
                                         name="size"
                                         className={cx('lg:w-4 lg:h-4')}
                                         type="radio"

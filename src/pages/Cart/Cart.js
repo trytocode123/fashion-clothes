@@ -2,9 +2,9 @@ import classNames from 'classnames/bind';
 import styles from './Cart.module.scss';
 import { AddVoucher, Location1, Location2, Location3 } from '~/components/Icons/Icon';
 import images from '~/assets/images';
-import Quanlity from '~/components/Quanlity/Quanlity';
+import Quanlity from '~/components/Quanlity';
 import Button from '~/components/Button/Button';
-import { ToastContainer, toast } from 'react-toastify';
+
 const cx = classNames.bind(styles);
 function Cart() {
     const carts = [
@@ -107,13 +107,13 @@ function Cart() {
                     <div className={cx('lg:grid lg:grid-cols-2 lg:gap-x-[574px] lg:max-h-[415px]')}>
                         <div className={cx('lg:flex lg:flex-col lg:gap-[50px]')}>
                             {fields.map((field, index) => (
-                                <div className={cx('lg:flex lg:items-center lg:gap-[21px]')} key={index}>
-                                    {field.icon && <span>{field.icon}</span>}
+                                <div key={index} className={cx('lg:flex lg:items-center lg:gap-[21px]')}>
+                                    {field.icon && <span key={field}>{field.icon}</span>}
                                     <span
+                                        key={index}
                                         className={cx(
                                             'lg:text-[#171212] lg:text-[36px] lg:normal lg:font-[700] lg:leading-[120%]',
                                         )}
-                                        key={index}
                                     >
                                         {field.text}
                                     </span>
@@ -123,10 +123,10 @@ function Cart() {
                         <div className={cx('lg:grid lg:gird-cols-1 lg:gap-y-[40px] lg:text-center')}>
                             {results.map((result, index) => (
                                 <span
+                                    key={index}
                                     className={cx(
                                         'lg:bg-[#C5A356] lg:w-[131px] lg:text-[#E5E0DC] lg:text-[24px] lg:font-[700] lg:normal lg:leading-[120%] lg:rounded-[40px] lg:p-[10px]',
                                     )}
-                                    key={index}
                                 >
                                     {result}
                                 </span>

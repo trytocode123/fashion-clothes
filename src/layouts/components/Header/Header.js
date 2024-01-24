@@ -4,7 +4,7 @@ import Tippy from '@tippyjs/react/headless';
 import { Cart, Down, Iconsearch, LeftImage, Stroke } from '~/components/Icons/Icon';
 import Button from '~/components/Button';
 import images from '~/assets/images';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
@@ -108,19 +108,24 @@ function Header() {
 
     const arrButton = ['Store', 'Account', 'Wish List'];
     const [account, setAccount] = useState(false);
-    const [searchShow, setSearchShow] = useState(false);
+    const [searchShow, setSearchShow] = useState(true);
     const [searchValue, setSearchValue] = useState('');
     const handleonChange = (e) => {
-        const searchValueInput = e.target.value;
-        if (!searchValue.startsWith('')) {
-            setSearchShow(searchShow);
+        if (searchValue.startsWith(' ')) {
+            setSearchShow(false);
         } else {
-            console.log(searchShow);
             setSearchShow(true);
-            setSearchValue(searchValueInput);
+
+            setSearchValue(e.target.value);
         }
     };
-
+    useEffect(() => {
+        if (searchValue !== '') {
+            setSearchShow(searchShow);
+        } else {
+            setSearchShow(!searchShow);
+        }
+    }, [searchValue]);
     const handleOutsideClick = () => {
         setSearchShow(!searchShow);
     };
@@ -138,10 +143,11 @@ function Header() {
                 </span>
                 <div className={cx('header__input')}>
                     <Tippy
+                        appendTo={() => document.body}
                         onClickOutside={handleOutsideClick}
                         placement="bottom-start"
                         visible={searchShow}
-                        interactive={setSearchShow}
+                        interactive={true}
                         render={(attrs) => (
                             <div
                                 className={cx(
@@ -164,9 +170,6 @@ function Header() {
                                 type="text"
                                 value={searchValue}
                                 onChange={handleonChange}
-                                onFocus={() => {
-                                    setSearchShow(true);
-                                }}
                                 id="search"
                                 placeholder="Search for an item..."
                             />
@@ -177,9 +180,7 @@ function Header() {
 
                 <div className={cx('header__nav')}>
                     {arrButton.map((item, index) => (
-                        <Tippy content="hello">
-                            <Button key={index} children={item} />
-                        </Tippy>
+                        <Button key={index} children={item} />
                     ))}
 
                     <Button onClick={() => navigate('/cart')}>
@@ -216,10 +217,10 @@ function Header() {
                                         </div>
                                     )}
                                     {current.data.map((btnAccount, index) => (
-                                        <div>
+                                        <div key={index}>
                                             <Button
-                                                className={cx('btn-link')}
                                                 key={index}
+                                                className={cx('btn-link')}
                                                 to={btnAccount.to}
                                                 children={btnAccount.title}
                                                 onClick={() => {

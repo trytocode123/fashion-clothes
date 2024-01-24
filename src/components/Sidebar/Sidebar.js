@@ -67,7 +67,7 @@ function Sidebar() {
                     <div className={cx('select')}>
                         {title.filter.map((filter, index) => (
                             <div key={index} className={cx('block-checkbox')}>
-                                <input id={filter} className={cx('input')} type="checkbox" />
+                                <input key={filter} id={filter} className={cx('input')} type="checkbox" />
                                 <label htmlFor={filter} key={index}>
                                     {filter}
                                 </label>
@@ -75,7 +75,7 @@ function Sidebar() {
                         ))}
                         {title.moreBtn && (
                             <Button key={index} className={cx('btn-more')}>
-                                {title.more}{' '}
+                                {title.more}
                             </Button>
                         )}
                     </div>

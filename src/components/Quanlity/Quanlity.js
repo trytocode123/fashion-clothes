@@ -4,9 +4,9 @@ import classNames from 'classnames/bind';
 import Button from '~/components/Button';
 const cx = classNames.bind();
 function Quanlity() {
-    const [quanlity, setQuanlity] = useState(0);
+    const [quanlity, setQuality] = useState(0);
     const handleDecrease = () => {
-        setQuanlity((prev) => {
+        setQuality((prev) => {
             prev -= 1;
             if (prev < 0) {
                 prev = 0;
@@ -16,7 +16,7 @@ function Quanlity() {
     };
 
     const handleIncrease = () => {
-        setQuanlity((prev) => {
+        setQuality((prev) => {
             prev += 1;
             return prev;
         });
@@ -28,9 +28,12 @@ function Quanlity() {
             )}
         >
             <Button onClick={handleDecrease} className={cx('lg:text-[18px]')} children="-" />
-            <span className={cx('lg:flex lg:justify-center lg:items-center lg:w-[30px] lg:max-h-[20px]')}>
-                {quanlity}
-            </span>
+            <input
+                value={quanlity}
+                className={cx(
+                    'lg:flex lg:justify-center lg:items-center lg:w-[30px] lg:max-h-[20px] lg:bg-[transparent] lg:pl-[12px] lg:outline-none',
+                )}
+            ></input>
             <Button onClick={handleIncrease} className={cx('lg:text-[18px]')} children="+" />
         </div>
     );
