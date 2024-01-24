@@ -4,10 +4,8 @@ import Tippy from '@tippyjs/react/headless';
 import { Cart, Down, Iconsearch, LeftImage, Stroke } from '~/components/Icons/Icon';
 import Button from '~/components/Button';
 import images from '~/assets/images';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
-import React from 'react';
 
 const cx = classNames.bind(styles);
 /*
@@ -114,18 +112,14 @@ function Header() {
     const [searchValue, setSearchValue] = useState('');
     const handleonChange = (e) => {
         const searchValueInput = e.target.value;
-        if (searchValue.startsWith(' ')) {
-            setSearchShow(false);
+        if (!searchValue.startsWith('')) {
+            setSearchShow(searchShow);
         } else {
             console.log(searchShow);
+            setSearchShow(true);
             setSearchValue(searchValueInput);
         }
     };
-
-    useEffect(() => {
-        setSearchShow(true);
-        console.log(searchShow);
-    }, [searchValue]);
 
     const handleOutsideClick = () => {
         setSearchShow(!searchShow);
@@ -254,8 +248,12 @@ function Header() {
 }
 
 function SearchItems({ item = {} }) {
+    const navigate = useNavigate();
     return (
-        <div className={cx('lg:flex lg:items-center lg:gap-[16px]')}>
+        <div
+            className={cx('lg:flex lg:items-center lg:gap-[16px] lg:cursor-pointer')}
+            onClick={() => navigate('/details')}
+        >
             <img className={cx('lg:w-[70px] lg:h-[70px] lg:rounded-md')} src={item.img} />
             <div className={cx('lg:flex lg:flex-col lg:gap-[4px] lg:w-[400px]')}>
                 <span className={cx('lg:w-[100%] lg:h-[36px] ')}>{item.title}</span>

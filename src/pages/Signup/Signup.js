@@ -14,6 +14,7 @@ function Signup() {
     const navigate = useNavigate();
     const handleSignup = (data) => {
         const dataPost = { ...data };
+        console.log(data);
         console.log(dataPost);
         axios.post('https://shop-ban-hang-backend.onrender.com/user', dataPost).then((response) => {
             if (response.status === 201) {
