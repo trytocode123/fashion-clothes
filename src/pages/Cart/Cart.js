@@ -29,6 +29,13 @@ function Cart() {
             quality: '1 Colour',
             price: '$71.56',
         },
+        {
+            img: images.image_removebg_preview1,
+            title: 'Nike Air Max 95',
+            name: 'Men’s Shoes',
+            quality: '1 Colour',
+            price: '$71.56',
+        },
     ];
 
     const fields = [
