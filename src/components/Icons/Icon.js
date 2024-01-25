@@ -384,7 +384,7 @@ export const InputGradient = ({ width = '64px', height = '64px', className }) =>
     >
         <rect x="7" y="7" width="50" height="50" rx="25" fill="url(#paint0_angular_136_1624)" />
         <defs>
-            <radialGradient
+            <radia2xlradient
                 id="paint0_angular_136_1624"
                 cx="0"
                 cy="0"
@@ -394,7 +394,7 @@ export const InputGradient = ({ width = '64px', height = '64px', className }) =>
             >
                 <stop stopColor="#FFB6B6" />
                 <stop offset="1" stopColor="#98C185" />
-            </radialGradient>
+            </radia2xlradient>
         </defs>
     </svg>
 );

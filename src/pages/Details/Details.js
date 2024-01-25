@@ -139,9 +139,9 @@ function Details() {
                 <div className={cx('block-details__img')}>
                     <img src={images.Rectangle4} />
 
-                    <div className={cx('lg:flex lg:items-center lg:justify-between')}>
+                    <div className={cx('2xl:flex 2xl:items-center 2xl:justify-between')}>
                         <Button>
-                            <LeftImage className={cx('lg:mr-[-35px]')} />
+                            <LeftImage className={cx('2xl:mr-[-35px]')} />
                         </Button>
                         {arrImgs.map((arrImg, index) => (
                             <img key={index} src={arrImg} />
@@ -155,7 +155,7 @@ function Details() {
                 <div className={cx('block-details__product')}>
                     <div
                         className={cx(
-                            'md:flex md:flex-col md:gap-[40px] md:max-w-[100%] md:max-h-[250px] md:border-solid md:border-b-[1px] md:border-[#CCC3BC] lg:p-[10px]',
+                            'md:flex md:flex-col md:gap-[40px] md:max-w-[100%] md:max-h-[250px] md:border-solid md:border-b-[1px] md:border-[#CCC3BC] 2xl:p-[10px]',
                         )}
                     >
                         <div className={cx('block-details__product__category')}>
@@ -174,7 +174,7 @@ function Details() {
                             <div className={cx('md:flex md:flex-col md:gap-[11px]')}>
                                 <h2
                                     className={cx(
-                                        'lg:max-w-[219px] lg:max-h-[34px] lg:font-inter lg:normal lg:font-[600] lg:leading-normal lg:text-[28px] lg:text-[#171212]',
+                                        '2xl:max-w-[219px] 2xl:max-h-[34px] 2xl:font-inter 2xl:normal 2xl:font-[600] 2xl:leading-normal 2xl:text-[28px] 2xl:text-[#171212]',
                                     )}
                                 >
                                     Cannage Jacket
@@ -192,16 +192,16 @@ function Details() {
                             <div className={cx('md:flex  md:justify-center md:items-center md:gap-[13px]')}>
                                 <div
                                     className={cx(
-                                        'lg:flex lg:justify-center lg:items-center lg:max-w-[76px] lg:max-h-[43px] lg:gap-[7px] lg:p-[10px]',
+                                        '2xl:flex 2xl:justify-center 2xl:items-center 2xl:max-w-[76px] 2xl:max-h-[43px] 2xl:gap-[7px] 2xl:p-[10px]',
                                     )}
                                 >
                                     <Heart />
                                     <span className={cx('md:text-[#D46F77]')}>109</span>
                                 </div>
-                                <div className={cx('lg:p-[7px]')}>
+                                <div className={cx('2xl:p-[7px]')}>
                                     <Flag />
                                 </div>
-                                <div className={cx('lg:p-[7px]')}>
+                                <div className={cx('2xl:p-[7px]')}>
                                     <Share />
                                 </div>
                             </div>
@@ -209,20 +209,20 @@ function Details() {
                     </div>
                     <div
                         className={cx(
-                            'lg:flex lg:items-center lg:gap-[41px] lg:max-w-[100%] lg:max-h-[96px] lg:mt-[40px] lg:border-b-[1px] lg:border-solid lg:border-[#CCC3BC] lg:pb-[39px] lg:mb-[40px]',
+                            '2xl:flex 2xl:items-center 2xl:gap-[41px] 2xl:max-w-[100%] 2xl:max-h-[96px] 2xl:mt-[40px] 2xl:border-b-[1px] 2xl:border-solid 2xl:border-[#CCC3BC] 2xl:pb-[39px] 2xl:mb-[40px]',
                         )}
                     >
-                        <div className={cx('lg:flex lg:flex-col lg:gap-[6px] lg:max-h-[72px] lg:max-w-[113px]')}>
+                        <div className={cx('2xl:flex 2xl:flex-col 2xl:gap-[6px] 2xl:max-h-[72px] 2xl:max-w-[113px]')}>
                             <h2
                                 className={cx(
-                                    'lg:max-w-[100%] lg:max-h-[41px] lg:font-inter lg:text-[34px] lg:font-[700] lg:text-[#AB8A37]',
+                                    '2xl:max-w-[100%] 2xl:max-h-[41px] 2xl:font-inter 2xl:text-[34px] 2xl:font-[700] 2xl:text-[#AB8A37]',
                                 )}
                             >
                                 $71.56
                             </h2>
                             <span
                                 className={cx(
-                                    'lg:max-w-[113px] lg:max-h-[25px] lg:text-[#AFA095] lg:font-inter lg:normal lg:leading-[normal] lg:line-through lg:text-[21px]',
+                                    '2xl:max-w-[113px] 2xl:max-h-[25px] 2xl:text-[#AFA095] 2xl:font-inter 2xl:normal 2xl:leading-[normal] 2xl:line-through 2xl:text-[21px]',
                                 )}
                             >
                                 $71.56
@@ -285,17 +285,19 @@ function Details() {
 
                     <div
                         className={cx(
-                            'lg:flex lg:flex-col lg:gap-[13px] lg:border-b-[1px] lg:border-solid lg:border-[#CCC3BC] lg:pb-[72px] lg:mb-[40px]',
+                            '2xl:flex 2xl:flex-col 2xl:gap-[13px] 2xl:border-b-[1px] 2xl:border-solid 2xl:border-[#CCC3BC] 2xl:pb-[72px] 2xl:mb-[40px]',
                         )}
                     >
                         <span
                             className={cx(
-                                'lg:max-w-[118px] lg:max-h-[19px] lg:font-inter lg:normal lg:leading:[normal] lg:text-[16px] lg:font-[600] lg:text-[#AFA095]',
+                                '2xl:max-w-[118px] 2xl:max-h-[19px] 2xl:font-inter 2xl:normal 2xl:leading:[normal] 2xl:text-[16px] 2xl:font-[600] 2xl:text-[#AFA095]',
                             )}
                         >
                             Choose a Color
                         </span>
-                        <div className={cx('lg:flex lg:gap-[12px] lg:items-center lg:max-w-[100%] lg:max-h-[96px]')}>
+                        <div
+                            className={cx('2xl:flex 2xl:gap-[12px] 2xl:items-center 2xl:max-w-[100%] 2xl:max-h-[96px]')}
+                        >
                             {inputCheckboxes.map((inputCheckbox, index) => (
                                 <div key={index}>{inputCheckbox}</div>
                             ))}
@@ -304,28 +306,28 @@ function Details() {
 
                     <div
                         className={cx(
-                            'lg:bg-[#faf5eb] lg:flex lg:max-h-[125px] max-w-[100%] lg:flex-col lg:gap-[14px]  lg:border-b-[1px] lg:border-[#CCC3BC] lg:border-solid lg:pb-[40px] lg:mb-[40px]',
+                            '2xl:bg-[#faf5eb] 2xl:flex 2xl:max-h-[125px] max-w-[100%] 2xl:flex-col 2xl:gap-[14px]  2xl:border-b-[1px] 2xl:border-[#CCC3BC] 2xl:border-solid 2xl:pb-[40px] 2xl:mb-[40px]',
                         )}
                     >
                         <span
                             className={cx(
-                                'lg:font-inter lg:text-[16px] lg:normal lg:font-[400] lg:leading-[150%] lg:text-[#AFA095]',
+                                '2xl:font-inter 2xl:text-[16px] 2xl:normal 2xl:font-[400] 2xl:leading-[150%] 2xl:text-[#AFA095]',
                             )}
                         >
                             Choose a Size
                         </span>
 
-                        <div className={cx('lg:flex lg:gap-[11px] max-w-[494px]')}>
+                        <div className={cx('2xl:flex 2xl:gap-[11px] max-w-[494px]')}>
                             {arrSizes.map((arrSize, index) => (
                                 <div
                                     key={arrSize}
                                     className={cx(
-                                        'lg:flex lg: items-center lg:gap-[8px] lg:pl-[10px] lg:pr-[10px] lg:pt-[7px] lg:pb-[7px] lg:mb-[8px] lg:rounded-[8px] lg:bg-[#EDF0F8]',
+                                        '2xl:flex 2xl: items-center 2xl:gap-[8px] 2xl:pl-[10px] 2xl:pr-[10px] 2xl:pt-[7px] 2xl:pb-[7px] 2xl:mb-[8px] 2xl:rounded-[8px] 2xl:bg-[#EDF0F8]',
                                     )}
                                 >
                                     <input
                                         name="size"
-                                        className={cx('lg:w-4 lg:h-4')}
+                                        className={cx('2xl:w-4 2xl:h-4')}
                                         type="radio"
                                         key={index}
                                         id={index}
@@ -333,7 +335,7 @@ function Details() {
                                     <label
                                         htmlFor={index}
                                         className={cx(
-                                            'lg:font-inter lg:text-[14px] lg:normal lg:text-[#3A4980] lg:font-[500]',
+                                            '2xl:font-inter 2xl:text-[14px] 2xl:normal 2xl:text-[#3A4980] 2xl:font-[500]',
                                         )}
                                     >
                                         {arrSize}
@@ -345,16 +347,16 @@ function Details() {
 
                     <div
                         className={cx(
-                            'lg:bg-[#faf5eb] lg:flex lg:justify-between lg:items-center lg:h-[50px] lg:mb-[68px]',
+                            '2xl:bg-[#faf5eb] 2xl:flex 2xl:justify-between 2xl:items-center 2xl:h-[50px] 2xl:mb-[68px]',
                         )}
                     >
                         <Quanlity />
                         <button
                             className={cx(
-                                'lg:flex lg:items-center lg:text-[#FFFFFF] lg:bg-[#AB8A37] lg:w-[460px] lg:h-[50px] lg:rounded-[40px] lg:justify-center lg:cursor-pointer lg:hover:opacity-[0.9]',
+                                '2xl:flex 2xl:items-center 2xl:text-[#FFFFFF] 2xl:bg-[#AB8A37] 2xl:w-[460px] 2xl:h-[50px] 2xl:rounded-[40px] 2xl:justify-center 2xl:cursor-pointer 2xl:hover:opacity-[0.9]',
                             )}
                         >
-                            <div className={cx('lg:flex lg:items-center lg:gap-[10px]')}>
+                            <div className={cx('2xl:flex 2xl:items-center 2xl:gap-[10px]')}>
                                 <Cart2 />
                                 <span>Add To Cart</span>
                             </div>
@@ -363,13 +365,13 @@ function Details() {
 
                     <div
                         className={cx(
-                            'lg:grid lg:grid-cols-1 lg:rounded-[14px] lg:p-[17px] lg:border-solid lg:border-[3px] lg:border-[E4E4E4]',
+                            '2xl:grid 2xl:grid-cols-1 2xl:rounded-[14px] 2xl:p-[17px] 2xl:border-solid 2xl:border-[3px] 2xl:border-[E4E4E4]',
                         )}
                     >
                         {arrDeliveries.map((arrDelivery, index) => (
                             <div
                                 key={index}
-                                className={cx('lg:flex lg:gap-[14px]', {
+                                className={cx('2xl:flex 2xl:gap-[14px]', {
                                     'border-bottom': arrDelivery.borderBottom,
                                     'padding-bottom': arrDelivery.paddingBottom,
                                     'padding-top': arrDelivery.paddingTop,
@@ -377,7 +379,7 @@ function Details() {
                             >
                                 <span> {arrDelivery.icon}</span>
 
-                                <div className={cx('lg:grid lg:grid-cols-1 lg:gap-y-[7px]')}>
+                                <div className={cx('2xl:grid 2xl:grid-cols-1 2xl:gap-y-[7px]')}>
                                     <strong>{arrDelivery.title}</strong>
                                     <span>{arrDelivery.content}</span>
                                 </div>
@@ -387,10 +389,10 @@ function Details() {
                 </div>
             </div>
 
-            <div className={cx('lg:flex lg:flex-col lg:h-[1670px]')}>
+            <div className={cx('2xl:flex 2xl:flex-col 2xl:h-[1670px]')}>
                 <div
                     className={cx(
-                        'lg:flex lg:items-center lg:border-[#E5E0DC] lg:border-b-[5px] lg:h-[80px]  lg:text-[#AB8A37] lg:pb-[30px] lg:mb-[53px]',
+                        '2xl:flex 2xl:items-center 2xl:border-[#E5E0DC] 2xl:border-b-[5px] 2xl:h-[80px]  2xl:text-[#AB8A37] 2xl:pb-[30px] 2xl:mb-[53px]',
                     )}
                 >
                     {arrBtns.map((arrBtn, index) => (
@@ -409,12 +411,12 @@ function Details() {
                 </div>
 
                 {hideon === 0 ? (
-                    <div className={cx('lg:flex lg:flex-col lg:mb-[40px]')}>
-                        <div className={cx('lg:flex lg:flex-col lg:gap-[21px] lg:mb-[40px] ')}>
-                            <strong className={cx('lg:text-[#344054] lg:text-[24px] lg:normal lg:font-[700]')}>
+                    <div className={cx('2xl:flex 2xl:flex-col 2xl:mb-[40px]')}>
+                        <div className={cx('2xl:flex 2xl:flex-col 2xl:gap-[21px] 2xl:mb-[40px] ')}>
+                            <strong className={cx('2xl:text-[#344054] 2xl:text-[24px] 2xl:normal 2xl:font-[700]')}>
                                 Product Description
                             </strong>
-                            <span className={cx('lg:text-[#5F4C49] lg:font-inter lg:font-[400]')}>
+                            <span className={cx('2xl:text-[#5F4C49] 2xl:font-inter 2xl:font-[400]')}>
                                 When it's colder than the far side of the moon and spitting rain too, you've still got
                                 to look good. From water-repellent leather to a rugged outsole, the Lunar Force 1 adapts
                                 AF-1 style, so you can keep your flame burning when the weather hits. Metal lace
@@ -422,18 +424,18 @@ function Details() {
                                 design gives your look the edge
                             </span>
                         </div>
-                        <div className={cx('lg:flex lg:flex-col lg:mb-[40px]')}>
+                        <div className={cx('2xl:flex 2xl:flex-col 2xl:mb-[40px]')}>
                             <strong
                                 className={cx(
-                                    'lg:text-[#344054] lg:text-[24px] lg:normal lg:font-[700] lg:block lg:mb-[21px]',
+                                    '2xl:text-[#344054] 2xl:text-[24px] 2xl:normal 2xl:font-[700] 2xl:block 2xl:mb-[21px]',
                                 )}
                             >
                                 Benefits
                             </strong>
 
-                            <div className={cx('lg:flex lg:flex-col lg:gap-[14px]')}>
+                            <div className={cx('2xl:flex 2xl:flex-col 2xl:gap-[14px]')}>
                                 {arrBenefits.map((arrBenefit, index) => (
-                                    <div key={index} className={cx('lg:flex lg:gap-[14px] lg:items-center')}>
+                                    <div key={index} className={cx('2xl:flex 2xl:gap-[14px] 2xl:items-center')}>
                                         <span>
                                             <Tick />
                                         </span>
@@ -443,18 +445,18 @@ function Details() {
                             </div>
                         </div>
 
-                        <div className={cx('lg:flex lg:flex-col lg:mb-[40px]')}>
+                        <div className={cx('2xl:flex 2xl:flex-col 2xl:mb-[40px]')}>
                             <strong
                                 className={cx(
-                                    'lg:text-[#344054] lg:text-[24px] lg:normal lg:font-[700] lg:block lg:mb-[21px]',
+                                    '2xl:text-[#344054] 2xl:text-[24px] 2xl:normal 2xl:font-[700] 2xl:block 2xl:mb-[21px]',
                                 )}
                             >
                                 Product Details
                             </strong>
 
-                            <div className={cx('lg:flex lg:flex-col lg:gap-[14px]')}>
+                            <div className={cx('2xl:flex 2xl:flex-col 2xl:gap-[14px]')}>
                                 {productDetails.map((productDetail, index) => (
-                                    <div key={index} className={cx('lg:flex lg:gap-[14px] lg:items-center')}>
+                                    <div key={index} className={cx('2xl:flex 2xl:gap-[14px] 2xl:items-center')}>
                                         <span>
                                             <Tick />
                                         </span>
@@ -464,18 +466,18 @@ function Details() {
                             </div>
                         </div>
 
-                        <div className={cx('lg:flex lg:flex-col lg:mb-[40px]')}>
+                        <div className={cx('2xl:flex 2xl:flex-col 2xl:mb-[40px]')}>
                             <strong
                                 className={cx(
-                                    'lg:text-[#344054] lg:text-[24px] lg:normal lg:font-[700] lg:block lg:mb-[21px]',
+                                    '2xl:text-[#344054] 2xl:text-[24px] 2xl:normal 2xl:font-[700] 2xl:block 2xl:mb-[21px]',
                                 )}
                             >
                                 More Details
                             </strong>
 
-                            <div className={cx('lg:flex lg:flex-col lg:gap-[14px]')}>
+                            <div className={cx('2xl:flex 2xl:flex-col 2xl:gap-[14px]')}>
                                 {moreDetails.map((moreDetail, index) => (
-                                    <div key={index} className={cx('lg:flex lg:gap-[14px] lg:items-center')}>
+                                    <div key={index} className={cx('2xl:flex 2xl:gap-[14px] 2xl:items-center')}>
                                         <span>
                                             <Tick />
                                         </span>
@@ -486,24 +488,24 @@ function Details() {
                         </div>
                     </div>
                 ) : (
-                    <div className={cx('lg:flex lg:flex-col lg:gap-[41px] lg:mb-[80px]')}>
+                    <div className={cx('2xl:flex 2xl:flex-col 2xl:gap-[41px] 2xl:mb-[80px]')}>
                         <span
                             className={cx(
-                                'lg:text-[#344054] lg:font-Proxima Nova] lg:text-[24px] lg:normal lg:font-[700]',
+                                '2xl:text-[#344054] 2xl:font-Proxima Nova] 2xl:text-[24px] 2xl:normal 2xl:font-[700]',
                             )}
                         >
                             Stylish and Comfortable: A Review of XYZ Brand's Fall Collection
                         </span>
 
-                        <div className={cx('lg:flex lg:flex-col lg:gap-[21px]')}>
-                            <span className={cx('lg:leading-7')}>
+                        <div className={cx('2xl:flex 2xl:flex-col 2xl:gap-[21px]')}>
+                            <span className={cx('2xl:leading-7')}>
                                 I recently had the pleasure of exploring XYZ Brand's latest Fall collection, and I must
                                 say, I am thoroughly impressed with the blend of style and comfort they've managed to
                                 achieve. From cozy sweaters to chic outerwear, the entire collection exudes a sense of
                                 modern sophistication.
                             </span>
 
-                            <span className={cx('lg:leading-7')}>
+                            <span className={cx('2xl:leading-7')}>
                                 One standout piece from the collection is the "Autumn Bliss Sweater." The material is
                                 incredibly soft against the skin, providing a level of comfort that makes it perfect for
                                 all-day wear. The design is both trendy and versatile, featuring a slightly oversized
@@ -512,7 +514,7 @@ function Details() {
                                 craftsmanship.
                             </span>
 
-                            <span className={cx('lg:leading-7')}>
+                            <span className={cx('2xl:leading-7')}>
                                 Another highlight is the "Urban Explorer Jacket." This outerwear piece not only keeps
                                 you warm on chilly days but also elevates your overall look. The tailored fit and
                                 attention-grabbing color options make it a statement piece for any autumn wardrobe. The
@@ -520,14 +522,14 @@ function Details() {
                                 design.
                             </span>
 
-                            <span className={cx('lg:leading-7')}>
+                            <span className={cx('2xl:leading-7')}>
                                 One aspect that particularly impressed me is the inclusivity of sizing in XYZ Brand's
                                 collection. The diverse range ensures that individuals of all body types can enjoy the
                                 latest trends without compromising on style. It's refreshing to see a brand prioritize
                                 inclusivity, making fashion accessible to a wider audience.
                             </span>
 
-                            <span className={cx('lg:leading-7')}>
+                            <span className={cx('2xl:leading-7')}>
                                 While the price point may be slightly higher than some other brands, the quality and
                                 design justify the investment. I appreciate the brand's commitment to sustainable
                                 practices, using eco-friendly materials and ethical manufacturing processes. Knowing
@@ -535,7 +537,7 @@ function Details() {
                                 satisfaction.
                             </span>
 
-                            <span className={cx('lg:leading-7')}>
+                            <span className={cx('2xl:leading-7')}>
                                 In conclusion, XYZ Brand's Fall collection is a testament to their commitment to
                                 blending fashion and functionality seamlessly. The attention to detail, comfort,
                                 inclusivity, and sustainability make this collection a standout choice for anyone
@@ -546,15 +548,15 @@ function Details() {
                         </div>
                     </div>
                 )}
-                <div className={cx('lg:flex lg:flex-col lg:gap-[40px]')}>
+                <div className={cx('2xl:flex 2xl:flex-col 2xl:gap-[40px]')}>
                     <strong
                         className={cx(
-                            'lg:font-[700] lg:text-[#344054] lg:font-[inter] lg:normal lg:text-[30px] lg:leading-[150%]',
+                            '2xl:font-[700] 2xl:text-[#344054] 2xl:font-[inter] 2xl:normal 2xl:text-[30px] 2xl:leading-[150%]',
                         )}
                     >
                         Similar Items You Might Also Like
                     </strong>
-                    <div className={cx('lg:flex lg:gap-[16px] lg:flex-wrap')}>
+                    <div className={cx('2xl:flex 2xl:gap-[16px] 2xl:flex-wrap')}>
                         {similarItems.map((similarItem, index) => (
                             <SimilarItems key={index} similarItems={similarItem} />
                         ))}
@@ -567,38 +569,38 @@ function Details() {
 
 function SimilarItems({ similarItems }) {
     return (
-        <div className={cx('lg:flex lg:items-center lg:gap-[16px]')}>
+        <div className={cx('2xl:flex 2xl:items-center 2xl:gap-[16px]')}>
             <div
                 className={cx(
-                    'lg:flex lg:flex-col lg:gap-[16px] lg:pt-[6px] lg:pr-[4px] lg:pb-[14.458px] lg:pl-[5px] lg:rounded-[6px] lg:border-solid lg:border-[1px] lg:border-[#8A7268]',
+                    '2xl:flex 2xl:flex-col 2xl:gap-[16px] 2xl:pt-[6px] 2xl:pr-[4px] 2xl:pb-[14.458px] 2xl:pl-[5px] 2xl:rounded-[6px] 2xl:border-solid 2xl:border-[1px] 2xl:border-[#8A7268]',
                 )}
             >
                 <img src={similarItems.img} />
 
-                <div className={cx('lg:flex lg:flex-col lg:gap-[4px] ')}>
+                <div className={cx('2xl:flex 2xl:flex-col 2xl:gap-[4px] ')}>
                     <span
                         className={cx(
-                            'lg:text-[#667085] lg:font-[inter] lg:text-[16px] lg:font-[400] lg:normal lg:leading-[150%]',
+                            '2xl:text-[#667085] 2xl:font-[inter] 2xl:text-[16px] 2xl:font-[400] 2xl:normal 2xl:leading-[150%]',
                         )}
                     >
                         {similarItems.title}
                     </span>
                     <span
                         className={cx(
-                            'lg:normal lg:font-[inter] lg:font-[700] lg:leading-[28px] lg:text-[18px] lg:text-[#344054]',
+                            '2xl:normal 2xl:font-[inter] 2xl:font-[700] 2xl:leading-[28px] 2xl:text-[18px] 2xl:text-[#344054]',
                         )}
                     >
                         {similarItems.price}
                     </span>
                     <span
                         className={cx(
-                            'lg:text-[#98A2B3] lg:font-[inter] lg:text-[14px] lg:normal lg:leading-[150%] lg:font-[400]',
+                            '2xl:text-[#98A2B3] 2xl:font-[inter] 2xl:text-[14px] 2xl:normal 2xl:leading-[150%] 2xl:font-[400]',
                         )}
                     >
                         5 types of shoos available
                     </span>
 
-                    <div className={cx('lg:flex lg:items-center')}>
+                    <div className={cx('2xl:flex 2xl:items-center')}>
                         {similarItems.stars.map((star, index) => (
                             <img key={index} src={star} />
                         ))}

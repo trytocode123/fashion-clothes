@@ -26,7 +26,7 @@ function Footer() {
                 </div>
             </div>
 
-            <div className={cx('block-logo2 sm:grid sm:grid-cols-2 w-full sm:gap-16 lg:grid-cols-4')}>
+            <div className={cx('block-logo2 sm:grid sm:grid-cols-2 w-full sm:gap-16 2xl:grid-cols-4')}>
                 <div className={cx('column-footer')}>
                     <h2>Column One</h2>
                     <span>Twenty One</span>

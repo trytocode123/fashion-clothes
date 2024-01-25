@@ -9,7 +9,9 @@ const cx = classNames.bind(styles);
 function Home() {
     const [activeBtn, setActiveBtn] = useState(0);
     const arrButtons = ['SIGNIFICANT', 'UNIQUE', 'BEST-SELLING'];
-
+    const handleActiveBtnClick = (index) => {
+        setActiveBtn(index);
+    };
     return (
         <div className={cx('wrapper')}>
             <img src={images.Rectangle} />
@@ -40,7 +42,7 @@ function Home() {
                                 <Button
                                     active={activeBtn === index && true}
                                     onClick={() => {
-                                        setActiveBtn(index);
+                                        handleActiveBtnClick(index);
                                     }}
                                     key={index}
                                     children={arrButton}

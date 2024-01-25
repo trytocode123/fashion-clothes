@@ -48,33 +48,37 @@ function Cart() {
 
     const results = ['$300', '$1', '-$15', '-$3', '$283'];
     return (
-        <div className={cx('lg:flex lg:flex-col')}>
+        <div className={cx('2xl:flex 2xl:flex-col')}>
             <h2
                 className={cx(
-                    'lg:border-b-[#000] lg:border-solid lg:border-b-[1px] lg:font-[inter] lg:text-[60px] lg:font-[700] lg:normal lg:leading-[120%] lg:text-[#5F4C49] lg:outline-none lg:pb-[30px] lg:mb-[30px]',
+                    '2xl:border-b-[#000] 2xl:border-solid 2xl:border-b-[1px] 2xl:font-[inter] 2xl:text-[60px] 2xl:font-[700] 2xl:normal 2xl:leading-[120%] 2xl:text-[#5F4C49] 2xl:outline-none 2xl:pb-[30px] 2xl:mb-[30px]',
                 )}
             >
                 Cart
             </h2>
 
-            <div className={cx('lg:flex lg:flex-col lg:gap-[30px]')}>
-                <div className={cx('lg:flex lg:gap-[15px]')}>
+            <div className={cx('2xl:flex 2xl:flex-col 2xl:gap-[30px]')}>
+                <div className={cx('2xl:flex 2xl:gap-[15px]')}>
                     <Location1 />
-                    <span className={cx('lg:text-[#171212] lg:font-[Poppins] lg:text-[24px] lg:font-[600] lg:normal')}>
+                    <span
+                        className={cx(
+                            '2xl:text-[#171212] 2xl:font-[Poppins] 2xl:text-[24px] 2xl:font-[600] 2xl:normal',
+                        )}
+                    >
                         Delivery address
                     </span>
                 </div>
 
-                <div className={cx('lg:flex lg:items-center lg:gap-[53px] mb-[120px]')}>
+                <div className={cx('2xl:flex 2xl:items-center 2xl:gap-[53px] mb-[120px]')}>
                     <div
                         className={cx(
-                            'lg:flex lg:flex-col lg:p-[25px] lg:bg-[#D8BC7E] lg:w-[369px] lg:h-[150px] lg:gap-[20px] lg:rounded-[10px]',
+                            '2xl:flex 2xl:flex-col 2xl:p-[25px] 2xl:bg-[#D8BC7E] 2xl:w-[369px] 2xl:h-[150px] 2xl:gap-[20px] 2xl:rounded-[10px]',
                         )}
                     >
                         <Location2 />
                         <span
                             className={cx(
-                                'lg:text-[#171212] lg:font-[Inter] lg:text-[16px] lg:font-[400] lg:leading-[150%] lg:whitespace-normal ',
+                                '2xl:text-[#171212] 2xl:font-[Inter] 2xl:text-[16px] 2xl:font-[400] 2xl:leading-[150%] 2xl:whitespace-normal ',
                             )}
                         >
                             925/6 Ngô Quyền,An Hải Bắc,quận Sơn Trà, thành phố Đà Nẵng
@@ -83,13 +87,13 @@ function Cart() {
 
                     <div
                         className={cx(
-                            'lg:flex lg:flex-col lg:p-[25px] lg:border-dashed lg:w-[369px] lg:rounded-[10px] lg:h-[150px] lg:border-[2px] lg:border-[#D8BC7E] lg:gap-[20px]',
+                            '2xl:flex 2xl:flex-col 2xl:p-[25px] 2xl:border-dashed 2xl:w-[369px] 2xl:rounded-[10px] 2xl:h-[150px] 2xl:border-[2px] 2xl:border-[#D8BC7E] 2xl:gap-[20px]',
                         )}
                     >
                         <Location3 />
                         <span
                             className={cx(
-                                'lg:text-[#171212] lg:font-[Inter] lg:text-[16px] lg:font-[400] lg:leading-[150%] lg:whitespace-normal',
+                                '2xl:text-[#171212] 2xl:font-[Inter] 2xl:text-[16px] 2xl:font-[400] 2xl:leading-[150%] 2xl:whitespace-normal',
                             )}
                         >
                             36/7 Tôn Thất Thuyết, thành phố Đông Hà, Quảng Trị
@@ -97,29 +101,29 @@ function Cart() {
                     </div>
                 </div>
 
-                <div className={cx('lg:flex lg:flex-col lg:gap-[120px] lg:mb-[96px]')}>
+                <div className={cx('2xl:flex 2xl:flex-col 2xl:gap-[120px] 2xl:mb-[96px]')}>
                     {carts.map((cart, index) => (
                         <CartItems key={index} cartItem={cart} />
                     ))}
                 </div>
 
-                <div className={cx('lg:flex lg:flex-col lg:gap-[40px]')}>
+                <div className={cx('2xl:flex 2xl:flex-col 2xl:gap-[40px]')}>
                     <h2
                         className={cx(
-                            'lg:text-[#171212] lg:font-[700] lg:normal lg:leading-[120%] lg:text-[36px] lg:pb-[30px] lg:border-b-solid lg:border-[#8A7268] lg:border-b-[1px] lg:px-[16px]',
+                            '2xl:text-[#171212] 2xl:font-[700] 2xl:normal 2xl:leading-[120%] 2xl:text-[36px] 2xl:pb-[30px] 2xl:border-b-solid 2xl:border-[#8A7268] 2xl:border-b-[1px] 2xl:px-[16px]',
                         )}
                     >
                         Pricing & shipping fee
                     </h2>
-                    <div className={cx('lg:grid lg:grid-cols-2 lg:gap-x-[574px] lg:max-h-[415px]')}>
-                        <div className={cx('lg:flex lg:flex-col lg:gap-[50px]')}>
+                    <div className={cx('2xl:grid 2xl:grid-cols-2 2xl:gap-x-[574px] 2xl:max-h-[415px]')}>
+                        <div className={cx('2xl:flex 2xl:flex-col 2xl:gap-[50px]')}>
                             {fields.map((field, index) => (
-                                <div key={index} className={cx('lg:flex lg:items-center lg:gap-[21px]')}>
+                                <div key={index} className={cx('2xl:flex 2xl:items-center 2xl:gap-[21px]')}>
                                     {field.icon && <span key={field}>{field.icon}</span>}
                                     <span
                                         key={index}
                                         className={cx(
-                                            'lg:text-[#171212] lg:text-[36px] lg:normal lg:font-[700] lg:leading-[120%]',
+                                            '2xl:text-[#171212] 2xl:text-[36px] 2xl:normal 2xl:font-[700] 2xl:leading-[120%]',
                                         )}
                                     >
                                         {field.text}
@@ -127,12 +131,12 @@ function Cart() {
                                 </div>
                             ))}
                         </div>
-                        <div className={cx('lg:grid lg:gird-cols-1 lg:gap-y-[40px] lg:text-center')}>
+                        <div className={cx('2xl:grid 2xl:gird-cols-1 2xl:gap-y-[40px] 2xl:text-center')}>
                             {results.map((result, index) => (
                                 <span
                                     key={index}
                                     className={cx(
-                                        'lg:bg-[#C5A356] lg:w-[131px] lg:text-[#E5E0DC] lg:text-[24px] lg:font-[700] lg:normal lg:leading-[120%] lg:rounded-[40px] lg:p-[10px]',
+                                        '2xl:bg-[#C5A356] 2xl:w-[131px] 2xl:text-[#E5E0DC] 2xl:text-[24px] 2xl:font-[700] 2xl:normal 2xl:leading-[120%] 2xl:rounded-[40px] 2xl:p-[10px]',
                                     )}
                                 >
                                     {result}
@@ -142,7 +146,7 @@ function Cart() {
                     </div>
                 </div>
 
-                <div className={cx('lg:flex lg:justify-end lg:items-center')}>
+                <div className={cx('2xl:flex 2xl:justify-end 2xl:items-center')}>
                     <Button />
                 </div>
             </div>
@@ -152,24 +156,38 @@ function Cart() {
 
 function CartItems({ cartItem = {} }) {
     return (
-        <div className={cx('lg:flex lg:items-center lg:justify-between')}>
-            <div className={cx('lg:flex lg:items-center lg:justify-between lg:w-[600px]')}>
+        <div className={cx('2xl:flex 2xl:items-center 2xl:justify-between')}>
+            <div className={cx('2xl:flex 2xl:items-center 2xl:justify-between 2xl:w-[600px]')}>
                 <img src={cartItem.img} />
-                <div className={cx('lg:flex lg:flex-col lg:gap-[10px]')}>
-                    <span className={cx('lg:text-[#171212] lg:font-[700] lg:text-[30px] lg:normal lg:leading-[150%] ')}>
+                <div className={cx('2xl:flex 2xl:flex-col 2xl:gap-[10px]')}>
+                    <span
+                        className={cx(
+                            '2xl:text-[#171212] 2xl:font-[700] 2xl:text-[30px] 2xl:normal 2xl:leading-[150%] ',
+                        )}
+                    >
                         {cartItem.title}
                     </span>
-                    <span className={cx('lg:text-[#171212] lg:font-[400] lg:text-[30px] lg:normal lg:leading-[150%] ')}>
+                    <span
+                        className={cx(
+                            '2xl:text-[#171212] 2xl:font-[400] 2xl:text-[30px] 2xl:normal 2xl:leading-[150%] ',
+                        )}
+                    >
                         {cartItem.name}
                     </span>
-                    <span className={cx('lg:text-[#171212] lg:font-[400] lg:text-[30px] lg:normal lg:leading-[150%] ')}>
+                    <span
+                        className={cx(
+                            '2xl:text-[#171212] 2xl:font-[400] 2xl:text-[30px] 2xl:normal 2xl:leading-[150%] ',
+                        )}
+                    >
                         {cartItem.quality}
                     </span>
                 </div>
             </div>
 
-            <div className={cx('lg:flex lg:flex-col lg:gap-[30px] lg:w-[250px] lg:h-[196px]')}>
-                <span className={cx('lg:text-[#AB8A37] lg:text-[34px] lg:font-[700] lg:leading-[normal] lg:normal')}>
+            <div className={cx('2xl:flex 2xl:flex-col 2xl:gap-[30px] 2xl:w-[250px] 2xl:h-[196px]')}>
+                <span
+                    className={cx('2xl:text-[#AB8A37] 2xl:text-[34px] 2xl:font-[700] 2xl:leading-[normal] 2xl:normal')}
+                >
                     {cartItem.price}
                 </span>
                 <Quanlity />

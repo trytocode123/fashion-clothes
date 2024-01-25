@@ -178,6 +178,12 @@ function Header() {
         setSearchValue('');
         ref.current.focus();
     };
+    const handleSwitchMenu = (childrenMenu) => {
+        const flag = !!childrenMenu;
+        if (flag) {
+            setMenu((prev) => [...prev, childrenMenu]);
+        }
+    };
     useLayoutEffect(() => {
         if (searchValue !== '') {
             setSearchShow(searchShow);
@@ -199,7 +205,7 @@ function Header() {
     return (
         <div className={cx('wrapper')}>
             <header className={cx('header')}>
-                <span onClick={() => navigate('/')} className={cx('header__span min-w-[150px] lg:cursor-pointer ')}>
+                <span onClick={() => navigate('/')} className={cx('header__span min-w-[150px] 2xl:cursor-pointer ')}>
                     Luxury’s Closet
                 </span>
                 <div className={cx('header__input')}>
@@ -212,7 +218,7 @@ function Header() {
                         render={(attrs) => (
                             <div
                                 className={cx(
-                                    'lg:flex lg:flex-col lg:gap-[8px] lg:w-[450px] lg:bg-white lg:max-h-[300px] lg:p-[12px] lg:rounded-[10px] lg:overflow-y-auto',
+                                    '2xl:flex 2xl:flex-col 2xl:gap-[8px] 2xl:w-[450px] 2xl:bg-white 2xl:max-h-[300px] 2xl:p-[12px] 2xl:rounded-[10px] 2xl:overflow-y-auto',
                                 )}
                                 tabIndex="-1"
                                 {...attrs}
@@ -223,7 +229,7 @@ function Header() {
                             </div>
                         )}
                     >
-                        <div className={cx('lg:flex lg:gap-[36px] lg:items-center lg:w-[280px]')}>
+                        <div className={cx('2xl:flex 2xl:gap-[36px] 2xl:items-center 2xl:w-[280px]')}>
                             <label htmlFor="search">
                                 <Iconsearch className={cx('header__input__iconsearch')} />
                             </label>
@@ -272,10 +278,10 @@ function Header() {
                             trigger="click"
                             onClickOutside={handleResetMenuPage}
                             render={(attrs) => (
-                                <div className={cx('lg:drop-shadow-md')}>
+                                <div className={cx('2xl:drop-shadow-md')}>
                                     <div
                                         className={cx(
-                                            'lg:w-[200px] lg:p-[12px] lg:rounded-[5px] lg:max-h-[200px] lg:overflow-y-auto lg:bg-[#faf5eb] ',
+                                            '2xl:w-[200px] 2xl:p-[12px] 2xl:rounded-[5px] 2xl:max-h-[200px] 2xl:overflow-y-auto 2xl:bg-[#faf5eb] ',
                                         )}
                                         tabIndex="-1"
                                         {...attrs}
@@ -283,18 +289,18 @@ function Header() {
                                         {menu.length > 1 && (
                                             <header
                                                 className={cx(
-                                                    'lg:flex lg:items-center lg:w-[160px] lg:h-[32px]  lg:bg-[#faf5eb] lg:fixed lg:top-0 lg:border-b-[black] lg: border-solid border-b-[1px] lg:z-[1] lg:shrink-0',
+                                                    '2xl:flex 2xl:items-center 2xl:w-[160px] 2xl:h-[32px]  2xl:bg-[#faf5eb] 2xl:fixed 2xl:top-0 2xl:border-b-[black] 2xl: border-solid border-b-[1px] 2xl:z-[1] 2xl:shrink-0',
                                                 )}
                                             >
                                                 <button onClick={handleBack}>
                                                     <LeftImage />
                                                 </button>
-                                                <h2 className={cx('lg:font-[700] lg:text-[20px] lg:w-[100%]')}>
+                                                <h2 className={cx('2xl:font-[700] 2xl:text-[20px] 2xl:w-[100%]')}>
                                                     {current.mainTitle}
                                                 </h2>
                                             </header>
                                         )}
-                                        <div className={cx('lg:pt-3 lg:pb-3 lg:bg-[#faf5eb]')}>
+                                        <div className={cx('2xl:pt-3 2xl:pb-3 2xl:bg-[#faf5eb]')}>
                                             {current.data.map((btnAccount, index) => (
                                                 <Button
                                                     key={index}
@@ -302,10 +308,7 @@ function Header() {
                                                     to={btnAccount.to}
                                                     children={btnAccount.title}
                                                     onClick={() => {
-                                                        const flag = !!btnAccount.children;
-                                                        if (flag) {
-                                                            setMenu((prev) => [...prev, btnAccount.children]);
-                                                        }
+                                                        handleSwitchMenu(btnAccount.children);
                                                     }}
                                                 />
                                             ))}
@@ -314,7 +317,7 @@ function Header() {
                                 </div>
                             )}
                         >
-                            <button className={cx('lg:cursor-pointer lg:w-[32px] lg:h-[32px]')}>
+                            <button className={cx('2xl:cursor-pointer 2xl:w-[32px] 2xl:h-[32px]')}>
                                 <Down className={cx('w-[27px]')} />
                             </button>
                         </Tippy>
@@ -331,13 +334,13 @@ function SearchItems({ item = {} }) {
     const navigate = useNavigate();
     return (
         <div
-            className={cx('lg:flex lg:items-center lg:gap-[16px] lg:cursor-pointer')}
+            className={cx('2xl:flex 2xl:items-center 2xl:gap-[16px] 2xl:cursor-pointer')}
             onClick={() => navigate('/details')}
         >
-            <img className={cx('lg:w-[70px] lg:h-[70px] lg:rounded-md')} src={item.img} />
-            <div className={cx('lg:flex lg:flex-col lg:gap-[4px] lg:w-[400px]')}>
-                <span className={cx('lg:w-[100%] lg:h-[36px] ')}>{item.title}</span>
-                <span className={cx('lg:w-[100%] lg:h-[36px]')}>{item.content}</span>
+            <img className={cx('2xl:w-[70px] 2xl:h-[70px] 2xl:rounded-md')} src={item.img} />
+            <div className={cx('2xl:flex 2xl:flex-col 2xl:gap-[4px] 2xl:w-[400px]')}>
+                <span className={cx('2xl:w-[100%] 2xl:h-[36px] ')}>{item.title}</span>
+                <span className={cx('2xl:w-[100%] 2xl:h-[36px]')}>{item.content}</span>
             </div>
         </div>
     );
