@@ -4,9 +4,11 @@ import Tippy from '@tippyjs/react/headless';
 import { Cart, Down, Iconsearch, LeftImage, Stroke } from '~/components/Icons/Icon';
 import Button from '~/components/Button';
 import images from '~/assets/images';
-import { useEffect, useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
+import { useRef } from 'react';
 const cx = classNames.bind(styles);
 /*
 menu = [
@@ -79,8 +81,44 @@ const btnAccounts = [
                     code: 'vi',
                     title: 'Việt Nam',
                 },
+                {
+                    code: 'fr',
+                    title: 'France',
+                },
+                {
+                    code: 'vi',
+                    title: 'Việt Nam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Việt Nam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Việt Nam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Việt Nam',
+                },
+                {
+                    code: 'vi',
+                    title: 'Việt Nam',
+                },
             ],
         },
+    },
+    {
+        title: 'Coins',
+    },
+    {
+        title: 'Profile',
+    },
+    {
+        title: 'Thông báo',
+    },
+    {
+        title: 'Voucher',
     },
 ];
 function Header() {
@@ -104,26 +142,49 @@ function Header() {
             title: "Man's Clothes",
             content: '1 Colour',
         },
+        {
+            img: images.no_image,
+            title: "Man's Clothes",
+            content: '1 Colour',
+        },
+        {
+            img: images.no_image,
+            title: "Man's Clothes",
+            content: '1 Colour',
+        },
+        {
+            img: images.no_image,
+            title: "Man's Clothes",
+            content: '1 Colour',
+        },
     ];
 
     const arrButton = ['Store', 'Account', 'Wish List'];
     const [account, setAccount] = useState(false);
     const [searchShow, setSearchShow] = useState(true);
     const [searchValue, setSearchValue] = useState('');
+    const [del, setDel] = useState(false);
+    const ref = useRef();
+
     const handleonChange = (e) => {
         if (searchValue.startsWith(' ')) {
             setSearchShow(false);
         } else {
             setSearchShow(true);
-
             setSearchValue(e.target.value);
         }
     };
-    useEffect(() => {
+    const handleCleanSearch = () => {
+        setSearchValue('');
+        ref.current.focus();
+    };
+    useLayoutEffect(() => {
         if (searchValue !== '') {
             setSearchShow(searchShow);
+            setDel(true);
         } else {
             setSearchShow(!searchShow);
+            setDel(false);
         }
     }, [searchValue]);
     const handleOutsideClick = () => {
@@ -151,7 +212,7 @@ function Header() {
                         render={(attrs) => (
                             <div
                                 className={cx(
-                                    'lg:flex lg:flex-col lg:gap-[8px] lg:w-[450px] lg:bg-white lg:min-h-[100px] lg:p-[12px] lg:rounded-[10px] lg:z-[1]',
+                                    'lg:flex lg:flex-col lg:gap-[8px] lg:w-[450px] lg:bg-white lg:max-h-[300px] lg:p-[12px] lg:rounded-[10px] lg:overflow-y-auto',
                                 )}
                                 tabIndex="-1"
                                 {...attrs}
@@ -162,20 +223,28 @@ function Header() {
                             </div>
                         )}
                     >
-                        <div>
+                        <div className={cx('lg:flex lg:gap-[36px] lg:items-center lg:w-[280px]')}>
                             <label htmlFor="search">
                                 <Iconsearch className={cx('header__input__iconsearch')} />
                             </label>
                             <input
+                                ref={ref}
                                 type="text"
                                 value={searchValue}
                                 onChange={handleonChange}
+                                onFocus={() => setSearchShow(true)}
                                 id="search"
                                 placeholder="Search for an item..."
                             />
+                            {del === true ? (
+                                <Button onClick={handleCleanSearch}>
+                                    <FontAwesomeIcon icon={faCircleXmark} />
+                                </Button>
+                            ) : (
+                                ''
+                            )}
                         </div>
                     </Tippy>
-                    <Stroke className={cx('header__input__stroke')} />
                 </div>
 
                 <div className={cx('header__nav')}>
@@ -203,35 +272,45 @@ function Header() {
                             trigger="click"
                             onClickOutside={handleResetMenuPage}
                             render={(attrs) => (
-                                <div
-                                    className={cx('lg:w-[200px] lg:bg-white lg:p-[12px] lg:rounded-[5px] ')}
-                                    tabIndex="-1"
-                                    {...attrs}
-                                >
-                                    {menu.length > 1 && (
-                                        <div className={cx('lg:flex')}>
-                                            <button onClick={handleBack}>
-                                                <LeftImage />
-                                            </button>
-                                            <h2 className={cx('lg:font-[700] lg:text-[20px]')}>{current.mainTitle}</h2>
+                                <div className={cx('lg:drop-shadow-md')}>
+                                    <div
+                                        className={cx(
+                                            'lg:w-[200px] lg:p-[12px] lg:rounded-[5px] lg:max-h-[200px] lg:overflow-y-auto lg:bg-[#faf5eb] ',
+                                        )}
+                                        tabIndex="-1"
+                                        {...attrs}
+                                    >
+                                        {menu.length > 1 && (
+                                            <header
+                                                className={cx(
+                                                    'lg:flex lg:items-center lg:w-[160px] lg:h-[32px]  lg:bg-[#faf5eb] lg:fixed lg:top-0 lg:border-b-[black] lg: border-solid border-b-[1px] lg:z-[1] lg:shrink-0',
+                                                )}
+                                            >
+                                                <button onClick={handleBack}>
+                                                    <LeftImage />
+                                                </button>
+                                                <h2 className={cx('lg:font-[700] lg:text-[20px] lg:w-[100%]')}>
+                                                    {current.mainTitle}
+                                                </h2>
+                                            </header>
+                                        )}
+                                        <div className={cx('lg:pt-3 lg:pb-3 lg:bg-[#faf5eb]')}>
+                                            {current.data.map((btnAccount, index) => (
+                                                <Button
+                                                    key={index}
+                                                    className={cx('btn-link')}
+                                                    to={btnAccount.to}
+                                                    children={btnAccount.title}
+                                                    onClick={() => {
+                                                        const flag = !!btnAccount.children;
+                                                        if (flag) {
+                                                            setMenu((prev) => [...prev, btnAccount.children]);
+                                                        }
+                                                    }}
+                                                />
+                                            ))}
                                         </div>
-                                    )}
-                                    {current.data.map((btnAccount, index) => (
-                                        <div key={index}>
-                                            <Button
-                                                key={index}
-                                                className={cx('btn-link')}
-                                                to={btnAccount.to}
-                                                children={btnAccount.title}
-                                                onClick={() => {
-                                                    const flag = !!btnAccount.children;
-                                                    if (flag) {
-                                                        setMenu((prev) => [...prev, btnAccount.children]);
-                                                    }
-                                                }}
-                                            />
-                                        </div>
-                                    ))}
+                                    </div>
                                 </div>
                             )}
                         >

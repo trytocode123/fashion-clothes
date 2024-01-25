@@ -15,9 +15,25 @@ function Login() {
     const navigate = useNavigate();
 
     const handleLogin = (data) => {
-        axios.post('https://shop-ban-hang-backend.onrender.com/user/login', data).then((response) => {
-            if (response.status === 201) {
-                toast.success('Đăng nhập thành công', {
+        axios
+            .post('https://shop-ban-hang-backend.onrender.com/user/login', data)
+            .then((response) => {
+                if (response.status === 201) {
+                    toast.success('Đăng nhập thành công', {
+                        position: 'top-right',
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: 'light',
+                    });
+                    navigate('/product');
+                }
+            })
+            .catch(() => {
+                toast.error('Đăng nhập thất bại, vui lòng kiểm tra lại tài khoản hoặc mặt khẩu', {
                     position: 'top-right',
                     autoClose: 5000,
                     hideProgressBar: false,
@@ -27,9 +43,7 @@ function Login() {
                     progress: undefined,
                     theme: 'light',
                 });
-                navigate('/product');
-            }
-        });
+            });
     };
     const {
         register,

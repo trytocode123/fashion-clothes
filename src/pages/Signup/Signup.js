@@ -16,9 +16,26 @@ function Signup() {
         const dataPost = { ...data };
         console.log(data);
         console.log(dataPost);
-        axios.post('https://shop-ban-hang-backend.onrender.com/user', dataPost).then((response) => {
-            if (response.status === 201) {
-                toast.success('Đăng ký thành công', {
+        axios
+            .post('https://shop-ban-hang-backend.onrender.com/user', dataPost)
+            .then((response) => {
+                if (response.status === 201) {
+                    toast.success('Đăng ký thành công', {
+                        position: 'top-right',
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: 'light',
+                    });
+                    navigate('/login');
+                    console.log(response.data.token);
+                }
+            })
+            .catch((e) => {
+                toast.error('Đăng ký thất bại', {
                     position: 'top-right',
                     autoClose: 5000,
                     hideProgressBar: false,
@@ -28,10 +45,8 @@ function Signup() {
                     progress: undefined,
                     theme: 'light',
                 });
-                navigate('/login');
-                console.log(response.data.token);
-            }
-        });
+                console.log(e);
+            });
     };
     const {
         register,

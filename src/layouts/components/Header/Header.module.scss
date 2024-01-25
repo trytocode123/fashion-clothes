@@ -1,6 +1,6 @@
 .wrapper {
     display: flex;
-    position: sticky;
+    position: fixed;
     align-items: center;
     justify-content: center;
 
@@ -35,9 +35,9 @@
 
     width: 280px;
     height: 24px;
+    border-bottom: 1px solid black;
 
     input {
-        margin-left: 34px;
         height: 24px;
         outline: none;
         background-color: transparent;
@@ -52,14 +52,6 @@
     position: absolute;
     left: 0px;
     bottom: 5px;
-}
-
-.header__input__stroke {
-    position: relative;
-    flex-shrink: 0;
-    bottom: -100%;
-    left: -77%;
-    width: 280px;
 }
 
 .header__nav {

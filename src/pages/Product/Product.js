@@ -19,12 +19,10 @@ function Product() {
                     Sort by: <strong>New Arrivals</strong> <Down />
                 </span>
             </div>
-
             <div className={cx('product')}>
                 <Sidebar />
                 <ProductList />
             </div>
-
             <div className={cx('pages')}>
                 <div className={cx('wrapper-btn-pages')}>
                     <Button className={cx('pages-btn', { color1: true })} children={<Left />} />
@@ -34,7 +32,6 @@ function Product() {
                     <Button className={cx('pages-btn', { color2: true })} children={<Right />} />
                 </div>
             </div>
-            <ToastContainer />
         </div>
     );
 }

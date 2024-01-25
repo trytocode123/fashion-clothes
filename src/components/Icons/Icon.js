@@ -101,19 +101,6 @@ export const Iconsearch = ({ width = '17px', height = '17px', className }) => (
     </svg>
 );
 
-export const Stroke = ({ width = '281', height = '1', className }) => (
-    <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width={width}
-        height={height}
-        viewBox="0 0 281 1"
-        fill="none"
-        className={className}
-    >
-        <path d="M0.5 0.5H280.5" stroke="#9CA3AF" />
-    </svg>
-);
-
 export const Cart = ({ width = '25px', height = '25px', className }) => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
