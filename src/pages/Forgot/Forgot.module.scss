@@ -1,12 +1,9 @@
 .wrapper {
     display: flex;
     width: 100%;
-    height: 1080px;
+    height: 1000px;
     background-color: #f5f2f1;
-    margin-top: -10px;
-    margin-bottom: -10px;
-    position: relative;
-    float: right;
+    margin-bottom: -20px;
 }
 
 .wrapper_item-left {
@@ -15,7 +12,7 @@
     justify-content: center;
     flex-direction: column;
     width: 50%;
-    height: 1080px;
+    height: 100%;
 
     .wrapper_item-left_input {
         display: inline-flex;
@@ -132,7 +129,7 @@
     justify-content: center;
     float: right;
     width: 50%;
-    height: 1080px;
+    height: 100%;
 
     background: #f3e8d4;
     border-radius: 40px 0px 0px 40px;

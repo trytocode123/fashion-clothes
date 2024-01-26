@@ -18,7 +18,7 @@ function Home() {
             <div className={cx('wrapper__body')}>
                 <div className={cx('wrapper__body__item')}>
                     <h2 className={cx('header')}>PRODUCT CATALOG</h2>
-                    <div className={cx('grid grid-cols-1  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4')}>
+                    <div className={cx('lg:grid lg:grid-cols-4 gap-4')}>
                         <img src={images.Rectangle1389} />
                         <img src={images.Rectangle1391} />
                         <img src={images.Rectangle1392} />
@@ -52,7 +52,7 @@ function Home() {
                         </div>
 
                         {activeBtn === 0 && (
-                            <div className={cx('grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4')}>
+                            <div className={cx('lg:grid lg:grid-cols-4 lg:gap-4')}>
                                 <img alt="img" src={images.Rectangle1394} />
 
                                 <img src={images.Rectangle1395} alt="img" />
@@ -63,46 +63,54 @@ function Home() {
                             </div>
                         )}
                         {activeBtn === 1 && (
-                            <div className={cx('grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4')}>
-                                <img alt="img" src={images.Rectangle1395} />
+                            <div className={cx('lg:grid  lg:grid-cols-4 lg:gap-4')}>
+                                <img
+                                    className={cx('lg:h-[351px] lg:w-[285px] lg:rounded-[6px]')}
+                                    alt="img"
+                                    src={images.Rectangle1395}
+                                />
 
                                 <img
-                                    className={cx('lg:h-[500px] lg:w-[406px] lg:rounded-[6px]')}
+                                    className={cx('lg:h-[351px] lg:w-[285px] lg:rounded-[6px]')}
                                     src={images.watch}
                                     alt="img"
                                 />
 
                                 <img
-                                    className={cx('lg:h-[500px] lg:w-[406px] lg:rounded-[6px]')}
+                                    className={cx('lg:h-[351px] lg:w-[285px] lg:rounded-[6px]')}
                                     src={images.watch2}
                                     alt="img"
                                 />
 
                                 <img
-                                    className={cx('lg:h-[500px] lg:w-[406px] lg:rounded-[6px]')}
+                                    className={cx('lg:h-[351px] lg:w-[285px] lg:rounded-[6px]')}
                                     src={images.watch3}
                                     alt="img"
                                 />
                             </div>
                         )}
                         {activeBtn === 2 && (
-                            <div className={cx('grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4')}>
-                                <img alt="img" src={images.Rectangle1396} />
+                            <div className={cx('lg:grid  lg:grid-cols-4 lg:gap-4')}>
+                                <img
+                                    className={cx('lg:h-[351px] lg:w-[285px] lg:rounded-[6px]')}
+                                    alt="img"
+                                    src={images.Rectangle1396}
+                                />
 
                                 <img
-                                    className={cx('lg:h-[500px] lg:w-[406px] lg:rounded-[6px]')}
+                                    className={cx('lg:h-[351px] lg:w-[285px] lg:rounded-[6px]')}
                                     src={images.shoes_vintage}
                                     alt="img"
                                 />
 
                                 <img
-                                    className={cx('lg:h-[500px] lg:w-[406px] lg:rounded-[6px]')}
+                                    className={cx('lg:h-[351px] lg:w-[285px] lg:rounded-[6px]')}
                                     src={images.shoes_vintage2}
                                     alt="img"
                                 />
 
                                 <img
-                                    className={cx('lg:h-[500px] lg:w-[406px] lg:rounded-[6px]')}
+                                    className={cx('lg:h-[351px] lg:w-[285px] lg:rounded-[6px]')}
                                     src={images.shoes_vintage3}
                                     alt="img"
                                 />

@@ -1,5 +1,6 @@
 @import 'normalize.css';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500');
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +11,6 @@
 body {
     font-family: 'Inter';
     text-rendering: optimizeSpeed;
-    overflow-y: overlay;
 }
 //Scrollbar CSS
 html *::-webkit-scrollbar {

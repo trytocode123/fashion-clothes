@@ -2,14 +2,14 @@
     display: flex;
     flex-direction: column;
     max-width: 100%;
-    height: 2390px;
+    height: 2090px;
     gap: 40px;
 }
 
 .notify-product {
     display: flex;
-    gap: 1063px;
-    max-width: 1672px;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .notify-product__showing {
@@ -30,8 +30,8 @@
 .product {
     display: flex;
     align-items: center;
-    gap: 110px;
-    min-width: 1720px;
+    gap: 50px;
+    width: 100%;
 }
 
 .pages {

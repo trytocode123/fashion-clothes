@@ -160,7 +160,7 @@ function Header() {
     ];
 
     const arrButton = ['Store', 'Account', 'Wish List'];
-    const [account, setAccount] = useState(false);
+    const [account, setAccount] = useState(true);
     const [searchShow, setSearchShow] = useState(true);
     const [searchValue, setSearchValue] = useState('');
     const [del, setDel] = useState(false);
@@ -205,7 +205,7 @@ function Header() {
     return (
         <div className={cx('wrapper')}>
             <header className={cx('header')}>
-                <span onClick={() => navigate('/')} className={cx('header__span min-w-[150px] 2xl:cursor-pointer ')}>
+                <span onClick={() => navigate('/')} className={cx('header__span min-w-[150px] lg:cursor-pointer ')}>
                     Luxury’s Closet
                 </span>
                 <div className={cx('header__input')}>
@@ -218,7 +218,7 @@ function Header() {
                         render={(attrs) => (
                             <div
                                 className={cx(
-                                    '2xl:flex 2xl:flex-col 2xl:gap-[8px] 2xl:w-[450px] 2xl:bg-white 2xl:max-h-[300px] 2xl:p-[12px] 2xl:rounded-[10px] 2xl:overflow-y-auto',
+                                    'lg:flex lg:flex-col lg:gap-[8px] lg:w-[300px] lg:bg-white lg:max-h-[300px] lg:p-[12px] lg:rounded-[10px] lg:overflow-y-auto',
                                 )}
                                 tabIndex="-1"
                                 {...attrs}
@@ -229,8 +229,8 @@ function Header() {
                             </div>
                         )}
                     >
-                        <div className={cx('2xl:flex 2xl:gap-[36px] 2xl:items-center 2xl:w-[280px]')}>
-                            <label htmlFor="search">
+                        <div className={cx('lg:flex lg:items-center lg:w-[150px]')}>
+                            <label className={cx('lg:ml-5')} htmlFor="search">
                                 <Iconsearch className={cx('header__input__iconsearch')} />
                             </label>
                             <input
@@ -242,6 +242,7 @@ function Header() {
                                 id="search"
                                 placeholder="Search for an item..."
                             />
+
                             {del === true ? (
                                 <Button onClick={handleCleanSearch}>
                                     <FontAwesomeIcon icon={faCircleXmark} />
@@ -263,10 +264,10 @@ function Header() {
                     </Button>
                 </div>
 
-                {!account ? (
+                {account ? (
                     <div className={cx('account')}>
                         <div className={cx('account-item')}>
-                            <img className={cx('img rounded-md w-[45px] h-[45px]')} src={images.no_image} />
+                            <img className={cx('img rounded-lg w-[45px] h-[45px]')} src={images.no_image} />
                             <div className={cx('block-text flex flex-col')}>
                                 <span className={cx('min-w-[150px]')}>Welcome back,</span>
                                 <span className={cx('max-w-[150px]')}>An</span>
@@ -278,10 +279,10 @@ function Header() {
                             trigger="click"
                             onClickOutside={handleResetMenuPage}
                             render={(attrs) => (
-                                <div className={cx('2xl:drop-shadow-md')}>
+                                <div className={cx('lg:drop-shadow-lg')}>
                                     <div
                                         className={cx(
-                                            '2xl:w-[200px] 2xl:p-[12px] 2xl:rounded-[5px] 2xl:max-h-[200px] 2xl:overflow-y-auto 2xl:bg-[#faf5eb] ',
+                                            'lg:w-[150px] lg:p-[12px] lg:rounded-[5px] lg:max-h-[200px] lg:overflow-y-auto lg:bg-[#faf5eb] ',
                                         )}
                                         tabIndex="-1"
                                         {...attrs}
@@ -289,18 +290,18 @@ function Header() {
                                         {menu.length > 1 && (
                                             <header
                                                 className={cx(
-                                                    '2xl:flex 2xl:items-center 2xl:w-[160px] 2xl:h-[32px]  2xl:bg-[#faf5eb] 2xl:fixed 2xl:top-0 2xl:border-b-[black] 2xl: border-solid border-b-[1px] 2xl:z-[1] 2xl:shrink-0',
+                                                    'lg:flex lg:items-center lg:w-[120px] lg:h-[32px]  lg:bg-[#faf5eb] lg:fixed lg:top-0 lg:border-b-[black] lg: border-solid border-b-[1px] lg:z-[1] lg:shrink-0',
                                                 )}
                                             >
                                                 <button onClick={handleBack}>
-                                                    <LeftImage />
+                                                    <LeftImage className={cx('lg:w-[20px]')} />
                                                 </button>
-                                                <h2 className={cx('2xl:font-[700] 2xl:text-[20px] 2xl:w-[100%]')}>
+                                                <h2 className={cx('lg:font-[700] lg:text-[20px] lg:w-[100px]')}>
                                                     {current.mainTitle}
                                                 </h2>
                                             </header>
                                         )}
-                                        <div className={cx('2xl:pt-3 2xl:pb-3 2xl:bg-[#faf5eb]')}>
+                                        <div className={cx('lg:pt-3 lg:pb-3 lg:bg-[#faf5eb]')}>
                                             {current.data.map((btnAccount, index) => (
                                                 <Button
                                                     key={index}
@@ -317,7 +318,7 @@ function Header() {
                                 </div>
                             )}
                         >
-                            <button className={cx('2xl:cursor-pointer 2xl:w-[32px] 2xl:h-[32px]')}>
+                            <button className={cx('lg:cursor-pointer lg:w-[32px] lg:h-[32px]')}>
                                 <Down className={cx('w-[27px]')} />
                             </button>
                         </Tippy>
@@ -334,13 +335,13 @@ function SearchItems({ item = {} }) {
     const navigate = useNavigate();
     return (
         <div
-            className={cx('2xl:flex 2xl:items-center 2xl:gap-[16px] 2xl:cursor-pointer')}
+            className={cx('lg:flex lg:items-center lg:gap-[16px] lg:cursor-pointer')}
             onClick={() => navigate('/details')}
         >
-            <img className={cx('2xl:w-[70px] 2xl:h-[70px] 2xl:rounded-md')} src={item.img} />
-            <div className={cx('2xl:flex 2xl:flex-col 2xl:gap-[4px] 2xl:w-[400px]')}>
-                <span className={cx('2xl:w-[100%] 2xl:h-[36px] ')}>{item.title}</span>
-                <span className={cx('2xl:w-[100%] 2xl:h-[36px]')}>{item.content}</span>
+            <img className={cx('lg:w-[70px] lg:h-[70px] lg:rounded-lg')} src={item.img} />
+            <div className={cx('lg:flex lg:flex-col lg:gap-[4px] lg:w-[200px]')}>
+                <span className={cx('lg:w-[100%] lg:h-[36px] ')}>{item.title}</span>
+                <span className={cx('lg:w-[100%] lg:h-[36px]')}>{item.content}</span>
             </div>
         </div>
     );

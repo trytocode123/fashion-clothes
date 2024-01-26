@@ -16,27 +16,27 @@
 
 .wrapper {
     display: flex;
+    position: relative;
     flex-direction: column;
-    width: 1920px;
+    justify-content: center;
+    max-width: 100%;
+    overflow: hidden;
+    min-height: 3500px;
+    align-items: center;
     gap: 30px;
     background: var(--secondary-50, #faf5eb);
-    position: sticky;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    margin-bottom: -24px;
 }
 
 .body {
     display: flex;
     flex-direction: column;
-    gap: 120px;
+    width: 100%;
     min-height: 3000px;
-    margin-top: 100px;
 }
 
 .container {
-    padding: 0 108.8px;
-    min-width: 1920px;
-    min-height: 2500px;
+    padding: 0 34px;
+    width: 100%;
+    min-height: 3300px;
 }

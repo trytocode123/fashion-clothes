@@ -98,7 +98,7 @@ function ProductList() {
         },
     ];
     return (
-        <div className={cx('wrapper grid grid-cols-3 gap-x-4 gap-y-[50px]')}>
+        <div className={cx('wrapper lg:grid lg:grid-cols-3 lg:gap-x-[23px] lg:gap-y-[50px]')}>
             {productItems.map((productItem, index) => (
                 <ProductItems
                     onClick={() => navigate('/details')}
