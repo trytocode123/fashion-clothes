@@ -48,7 +48,7 @@ function Cart() {
 
     const results = ['$300', '$1', '-$15', '-$3', '$283'];
     return (
-        <div className={cx('lg:flex lg:flex-col')}>
+        <div className={cx('lg:flex lg:flex-col lg:mt-[100px]')}>
             <h2
                 className={cx(
                     'lg:border-b-[#000] lg:border-solid lg:border-b-[1px] lg:font-[inter] lg:text-[60px] lg:font-[700] lg:normal lg:leading-[120%] lg:text-[#5F4C49] lg:outline-none lg:pb-[30px] lg:mb-[30px]',

@@ -60,6 +60,13 @@ function Home() {
                                 <img src={images.Rectangle1396} alt="img" />
 
                                 <img src={images.Rectangle1397} alt="img" />
+                                <img alt="img" src={images.Rectangle1394} />
+
+                                <img src={images.Rectangle1395} alt="img" />
+
+                                <img src={images.Rectangle1396} alt="img" />
+
+                                <img src={images.Rectangle1397} alt="img" />
                             </div>
                         )}
                         {activeBtn === 1 && (
@@ -87,10 +94,56 @@ function Home() {
                                     src={images.watch3}
                                     alt="img"
                                 />
+                                <img
+                                    className={cx('lg:h-[351px] lg:w-[285px] lg:rounded-[6px]')}
+                                    alt="img"
+                                    src={images.Rectangle1395}
+                                />
+
+                                <img
+                                    className={cx('lg:h-[351px] lg:w-[285px] lg:rounded-[6px]')}
+                                    src={images.watch}
+                                    alt="img"
+                                />
+
+                                <img
+                                    className={cx('lg:h-[351px] lg:w-[285px] lg:rounded-[6px]')}
+                                    src={images.watch2}
+                                    alt="img"
+                                />
+
+                                <img
+                                    className={cx('lg:h-[351px] lg:w-[285px] lg:rounded-[6px]')}
+                                    src={images.watch3}
+                                    alt="img"
+                                />
                             </div>
                         )}
                         {activeBtn === 2 && (
                             <div className={cx('lg:grid  lg:grid-cols-4 lg:gap-4')}>
+                                <img
+                                    className={cx('lg:h-[351px] lg:w-[285px] lg:rounded-[6px]')}
+                                    alt="img"
+                                    src={images.Rectangle1396}
+                                />
+
+                                <img
+                                    className={cx('lg:h-[351px] lg:w-[285px] lg:rounded-[6px]')}
+                                    src={images.shoes_vintage}
+                                    alt="img"
+                                />
+
+                                <img
+                                    className={cx('lg:h-[351px] lg:w-[285px] lg:rounded-[6px]')}
+                                    src={images.shoes_vintage2}
+                                    alt="img"
+                                />
+
+                                <img
+                                    className={cx('lg:h-[351px] lg:w-[285px] lg:rounded-[6px]')}
+                                    src={images.shoes_vintage3}
+                                    alt="img"
+                                />
                                 <img
                                     className={cx('lg:h-[351px] lg:w-[285px] lg:rounded-[6px]')}
                                     alt="img"

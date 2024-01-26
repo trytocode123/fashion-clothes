@@ -21,22 +21,14 @@
     justify-content: center;
     max-width: 100%;
     overflow: hidden;
-    min-height: 3500px;
     align-items: center;
     gap: 30px;
     background: var(--secondary-50, #faf5eb);
     margin-bottom: -24px;
 }
 
-.body {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    min-height: 3000px;
-}
-
 .container {
     padding: 0 34px;
     width: 100%;
-    min-height: 3300px;
+    min-height: 3350px;
 }

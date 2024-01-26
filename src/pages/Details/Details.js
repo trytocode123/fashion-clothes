@@ -391,7 +391,7 @@ function Details() {
                 </div>
             </div>
 
-            <div className={cx('lg:flex lg:flex-col lg:h-[1670px]')}>
+            <div className={cx('lg:flex lg:flex-col lg:min-h-[1070px]')}>
                 <div
                     className={cx(
                         'lg:flex lg:items-center lg:border-[#E5E0DC] lg:border-b-[5px] lg:h-[80px]  lg:text-[#AB8A37] lg:pb-[30px] lg:mb-[53px]',
