@@ -17,11 +17,9 @@
 .wrapper {
     display: flex;
     position: relative;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 100%;
-    overflow: hidden;
+    width: 100%;
     align-items: center;
+    overflow: hidden;
     gap: 30px;
     background: var(--secondary-50, #faf5eb);
     margin-bottom: -24px;

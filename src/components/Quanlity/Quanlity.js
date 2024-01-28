@@ -24,7 +24,7 @@ function Quanlity() {
     return (
         <div
             className={cx(
-                'lg:flex lg:items-center lg:gap-[50px] lg:py-[5px] lg:px-32px lg:rounded-[40px] lg:bg-[#F3F3F3] lg:border-solid lg:border-[#8A7268] lg:border-[1px] lg:font-inter lg:h-[50px] lg:max-w-[213px] lg:justify-evenly',
+                'lg:flex lg:items-center lg:gap-[50px] lg:py-[5px] lg:px-32px lg:rounded-[40px] lg:bg-[#F3F3F3] lg:border-solid lg:border-[#8A7268] lg:border-[1px] lg:font-inter lg:h-[50px] lg:max-w-[190px] lg:justify-evenly',
             )}
         >
             <Button onClick={handleDecrease} className={cx('lg:text-[18px]')} children="-" />

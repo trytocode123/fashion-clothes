@@ -290,13 +290,13 @@ function Header() {
                                         {menu.length > 1 && (
                                             <header
                                                 className={cx(
-                                                    'lg:flex lg:items-center lg:w-[120px] lg:h-[32px]  lg:bg-[#faf5eb] lg:fixed lg:top-0 lg:border-b-[black] lg: border-solid border-b-[1px] lg:z-[1] lg:shrink-0',
+                                                    'lg:flex lg:items-center lg:w-[111px] lg:h-[32px]  lg:bg-[#faf5eb] lg:fixed lg:top-0 lg:border-b-[black] lg: border-solid border-b-[1px] lg:z-[1] lg:shrink-0',
                                                 )}
                                             >
-                                                <button onClick={handleBack}>
-                                                    <LeftImage className={cx('lg:w-[20px]')} />
+                                                <button className={cx('lg:pt-[4px]')} onClick={handleBack}>
+                                                    <LeftImage className={cx('lg:w-[16px] lg:h-[16px]')} />
                                                 </button>
-                                                <h2 className={cx('lg:font-[700] lg:text-[20px] lg:w-[100px]')}>
+                                                <h2 className={cx('lg:font-[600] lg:text-[18px] lg:w-[100px]')}>
                                                     {current.mainTitle}
                                                 </h2>
                                             </header>

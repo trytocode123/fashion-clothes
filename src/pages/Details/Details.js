@@ -573,7 +573,7 @@ function SimilarItems({ similarItems }) {
     return (
         <div
             className={cx(
-                'lg:flex lg:flex-col lg:gap-[16px] lg:pt-[6px] lg:pr-[4px] lg:pb-[14.458px] lg:pl-[5px] lg:rounded-[6px] lg:border-solid lg:border-[1px] lg:border-[#8A7268] lg:max-w-[187px]',
+                'lg:flex lg:flex-col lg:gap-[16px] lg:pt-[6px] lg:pr-[6px] lg:pb-[14.458px] lg:pl-[6px] lg:rounded-[6px] lg:border-solid lg:border-[1px] lg:border-[#8A7268] lg:max-w-[187px]',
             )}
         >
             <img src={similarItems.img} />

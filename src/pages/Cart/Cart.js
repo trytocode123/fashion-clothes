@@ -36,6 +36,13 @@ function Cart() {
             quality: '1 Colour',
             price: '$71.56',
         },
+        {
+            img: images.image_removebg_preview1,
+            title: 'Nike Air Max 95',
+            name: 'Men’s Shoes',
+            quality: '1 Colour',
+            price: '$71.56',
+        },
     ];
 
     const fields = [
@@ -97,7 +104,7 @@ function Cart() {
                     </div>
                 </div>
 
-                <div className={cx('lg:flex lg:flex-col lg:gap-[100px] lg:mb-[96px]')}>
+                <div className={cx('lg:flex lg:flex-col lg:gap-[100px] lg:mb-[96px] lg:w-[400]')}>
                     {carts.map((cart, index) => (
                         <CartItems key={index} cartItem={cart} />
                     ))}
@@ -106,7 +113,7 @@ function Cart() {
                 <div className={cx('lg:flex lg:flex-col lg:gap-[40px]')}>
                     <h2
                         className={cx(
-                            'lg:text-[#171212] lg:font-[700] lg:normal lg:leading-[120%] lg:text-[34px] lg:pb-[30px] lg:border-b-solid lg:border-[#8A7268] lg:border-b-[1px] lg:px-[16px]',
+                            'lg:text-[#171212] lg:font-[700] lg:normal lg:leading-[120%] lg:text-[24px] lg:pb-[30px] lg:border-b-solid lg:border-[#8A7268] lg:border-b-[1px] lg:px-[16px]',
                         )}
                     >
                         Pricing & shipping fee
@@ -119,7 +126,7 @@ function Cart() {
                                     <span
                                         key={index}
                                         className={cx(
-                                            'lg:text-[#171212] lg:text-[24px] lg:normal lg:font-[700] lg:leading-[120%]',
+                                            'lg:text-[#171212] lg:text-[20px] lg:normal lg:font-[700] lg:leading-[120%]',
                                         )}
                                     >
                                         {field.text}
@@ -127,12 +134,12 @@ function Cart() {
                                 </div>
                             ))}
                         </div>
-                        <div className={cx('lg:grid lg:gird-cols-1 lg:gap-y-[30px] lg:text-center')}>
+                        <div className={cx('lg:flex lg:flex-col lg:gap-y-[30px] lg:text-center')}>
                             {results.map((result, index) => (
                                 <span
                                     key={index}
                                     className={cx(
-                                        'lg:bg-[#C5A356] lg:w-[100px] lg:text-[#E5E0DC] lg:text-[24px] lg:font-[700] lg:normal lg:leading-[120%] lg:rounded-[40px] lg:p-[10px]',
+                                        'lg:bg-[#C5A356] lg:max-w-[80px] lg:text-[#E5E0DC] lg:text-[20px] lg:font-[700] lg:normal lg:leading-[120%] lg:rounded-[40px] lg:p-[10px]',
                                     )}
                                 >
                                     {result}
@@ -153,16 +160,28 @@ function Cart() {
 function CartItems({ cartItem = {} }) {
     return (
         <div className={cx('lg:flex lg:items-center lg:justify-between')}>
-            <div className={cx('lg:flex lg:items-center lg:w-[600px]')}>
+            <div className={cx('lg:flex lg:items-center lg:w-[200px] lg:h-[200px]')}>
                 <img src={cartItem.img} />
-                <div className={cx('lg:flex lg:flex-col lg:gap-[10px]')}>
-                    <span className={cx('lg:text-[#171212] lg:font-[700] lg:text-[30px] lg:normal lg:leading-[150%] ')}>
+                <div className={cx('lg:flex lg:flex-col lg:gap-[10px] lg:w-[500px]')}>
+                    <span
+                        className={cx(
+                            'lg:text-[#171212] lg:font-[700] lg:text-[20px] lg:normal lg:leading-[150%] lg:w-[300px] ',
+                        )}
+                    >
                         {cartItem.title}
                     </span>
-                    <span className={cx('lg:text-[#171212] lg:font-[400] lg:text-[28px] lg:normal lg:leading-[150%] ')}>
+                    <span
+                        className={cx(
+                            'lg:text-[#171212] lg:font-[400] lg:text-[16px] lg:normal lg:leading-[150%] lg:w-[300px] ',
+                        )}
+                    >
                         {cartItem.name}
                     </span>
-                    <span className={cx('lg:text-[#171212] lg:font-[400] lg:text-[28px] lg:normal lg:leading-[150%] ')}>
+                    <span
+                        className={cx(
+                            'lg:text-[#171212] lg:font-[400] lg:text-[16px] lg:normal lg:leading-[150%] lg:w-[300px] ',
+                        )}
+                    >
                         {cartItem.quality}
                     </span>
                 </div>

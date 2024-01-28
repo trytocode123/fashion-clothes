@@ -96,6 +96,27 @@ function ProductList() {
             discountPrice: '$120.23',
             numberOrder: '24 Orders',
         },
+        {
+            img: images.Rectangle53,
+            title: 'Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse',
+            officialPrice: '$120.23',
+            discountPrice: '$120.23',
+            numberOrder: '24 Orders',
+        },
+        {
+            img: images.Rectangle53,
+            title: 'Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse',
+            officialPrice: '$120.23',
+            discountPrice: '$120.23',
+            numberOrder: '24 Orders',
+        },
+        {
+            img: images.Rectangle53,
+            title: 'Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse',
+            officialPrice: '$120.23',
+            discountPrice: '$120.23',
+            numberOrder: '24 Orders',
+        },
     ];
     return (
         <div className={cx('wrapper lg:grid lg:grid-cols-3 lg:gap-x-[23px] lg:gap-y-[50px]')}>

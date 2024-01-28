@@ -1,10 +1,9 @@
 import classNames from 'classnames/bind';
 import styles from './Product.module.scss';
 import { Down, Left, Right } from '~/components/Icons/Icon';
-import Sidebar from '~/components/Sidebar/Sidebar';
+import Sidebar from '~/components/Sidebar';
 import ProductList from '~/components/ProductList';
 import Button from '~/components/Button';
-import { ToastContainer } from 'react-toastify';
 
 const cx = classNames.bind(styles);
 function Product() {
