@@ -301,7 +301,11 @@ function Header() {
                                                 </h2>
                                             </header>
                                         )}
-                                        <div className={cx('lg:pt-3 lg:pb-3 lg:bg-[#faf5eb]')}>
+                                        <div
+                                            className={cx(
+                                                ' lg:flex lg:flex-col lg:pt-3 lg:pb-3 lg:bg-[#faf5eb] lg:gap-y-[10px]',
+                                            )}
+                                        >
                                             {current.data.map((btnAccount, index) => (
                                                 <Button
                                                     key={index}
