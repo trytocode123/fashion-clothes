@@ -2,7 +2,7 @@ import classNames from 'classnames/bind';
 import styles from './Cart.module.scss';
 import { AddVoucher, Location1, Location2, Location3 } from '~/components/Icons/Icon';
 import images from '~/assets/images';
-import Quanlity from '~/components/Quanlity';
+import Quality from '~/components/Quality/Quality';
 import Button from '~/components/Button/Button';
 
 const cx = classNames.bind(styles);
@@ -191,7 +191,7 @@ function CartItems({ cartItem = {} }) {
                 <span className={cx('lg:text-[#AB8A37] lg:text-[28px] lg:font-[700] lg:leading-[normal] lg:normal')}>
                     {cartItem.price}
                 </span>
-                <Quanlity />
+                <Quality />
             </div>
         </div>
     );

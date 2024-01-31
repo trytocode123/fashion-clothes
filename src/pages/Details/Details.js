@@ -22,7 +22,7 @@ import {
 } from '~/components/Icons/Icon';
 import Button from '~/components/Button/Button';
 import { useState } from 'react';
-import Quanlity from '~/components/Quanlity';
+import Quality from '~/components/Quality';
 
 const cx = classNames.bind(styles);
 
@@ -348,7 +348,7 @@ function Details() {
                             'lg:bg-[#faf5eb] lg:flex lg:justify-between lg:items-center lg:h-[50px] lg:mb-[68px]',
                         )}
                     >
-                        <Quanlity />
+                        <Quality />
                         <button
                             className={cx(
                                 'lg:flex lg:items-center lg:text-[#FFFFFF] lg:bg-[#AB8A37] lg:w-[300px] lg:h-[50px] lg:rounded-[40px] lg:justify-center lg:cursor-pointer lg:hover:opacity-[0.9]',

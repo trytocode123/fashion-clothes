@@ -303,7 +303,7 @@ function Header() {
                                         )}
                                         <div
                                             className={cx(
-                                                ' lg:flex lg:flex-col lg:pt-3 lg:pb-3 lg:bg-[#faf5eb] lg:gap-y-[10px]',
+                                                ' lg:flex lg:flex-col lg:pt-3 lg:pb-3 lg:bg-[#faf5eb] lg:gap-y-[10px] lg:mt-2',
                                             )}
                                         >
                                             {current.data.map((btnAccount, index) => (

@@ -3,8 +3,9 @@ import classNames from 'classnames/bind';
 
 import Button from '~/components/Button';
 const cx = classNames.bind();
-function Quanlity() {
-    const [quanlity, setQuality] = useState(0);
+function Quality() {
+    const [quality, setQuality] = useState(0);
+
     const handleDecrease = () => {
         setQuality((prev) => {
             prev -= 1;
@@ -21,6 +22,8 @@ function Quanlity() {
             return prev;
         });
     };
+    const handleOnchange = () => {};
+
     return (
         <div
             className={cx(
@@ -29,7 +32,8 @@ function Quanlity() {
         >
             <Button onClick={handleDecrease} className={cx('lg:text-[18px]')} children="-" />
             <input
-                value={quanlity}
+                onChange={handleOnchange}
+                value={quality}
                 className={cx(
                     'lg:flex lg:justify-center lg:items-center lg:w-[30px] lg:max-h-[20px] lg:bg-[transparent] lg:pl-[12px] lg:outline-none',
                 )}
@@ -39,4 +43,4 @@ function Quanlity() {
     );
 }
 
-export default Quanlity;
+export default Quality;
