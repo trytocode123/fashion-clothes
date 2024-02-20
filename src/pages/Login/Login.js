@@ -19,7 +19,7 @@ function Login() {
             .post('https://shop-ban-hang-backend.onrender.com/user/login', data)
             .then((response) => {
                 if (response.status === 201) {
-                    toast.success('Đăng nhập thành công, chào mừng Nguyễn Đăng Thiên An!', {
+                    toast.success(`Đăng nhập thành công, chào mừng ${response.data.user.email}!`, {
                         position: 'top-right',
                         autoClose: 5000,
                         hideProgressBar: false,
